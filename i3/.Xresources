@@ -1,0 +1,67 @@
+Xcursor.theme: Breeze_Snow
+
+!URxvt*font:  xft:UbuntuMono:pixelsize=5
+!URxvt*depth:                32
+!URxvt*background:            [85]#000000
+!URxvt*foreground:            [100]#ffffff
+!URxvt*borderless: 1
+URxvt*scrollBar:  false
+URxvt*saveLines:  5000
+URxvt*termName:    rxvt-unicode
+!URxvt.perl-ext-common: default,matcher
+URxvt.urlLauncher: firefox
+!URxvt.matcher.button: 1
+
+!sets the background to black and foreground to white for other terminals relying on Xresources
+*background: #dfe2d1
+*foreground: #92a28c
+
+! black
+*color0: #dfe2d1
+*color8: #b59993
+! red
+*color1: #4b7267
+*color9: #5bc0a9
+! green
+*color2: #71848d
+*color10: #69badc
+! yellow
+*color3: #82758c
+*color11: #be96da
+! blue
+*color4: #8c7a5b
+*color12: #e1af5a
+! magenta
+*color5: #768c72
+*color13: #86bfad
+! cyan
+*color6: #8c6669
+*color14: #b7696e
+! white
+*color7:  #8c8c68
+*color15: #c6cd5e
+! underline when default
+*colorUL: #92a28c
+! vim: set ft=xdefaults:
+
+
+
+!rofi.location:          0
+!rofi.color-enabled:     true
+!'background', 'border'
+rofi.color-window:      argb:dc111111, argb:dc111111
+! State:                'bg',          'fg',   'bgalt',       'hlbg',        'hlfg'
+rofi.color-normal:      argb:00333333, #ffffff, argb:00333333, argb:00333333, argb:ffefa211
+rofi.color-urgent:      argb:00333333, #ffffff, argb:00333333, argb:00333333, argb:ffefa211
+rofi.color-active:      argb:00333333, #ffffff, argb:00333333, argb:00333333, argb:ffefa211
+rofi.separator-style:   solid
+rofi.fullscreen:        true
+rofi.padding:           450
+rofi.hide-scrollbar:    true
+!rofi.line-margin:       5
+rofi.fake-transparency: false
+!rofi.yoffset:           100 
+!rofi.xoffset:           200
+!rofi.width:             200
+rofi.opacity:           90
+!rofi.font: Roboto-Regular.ttf 12
