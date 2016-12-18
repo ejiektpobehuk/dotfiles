@@ -16,3 +16,12 @@ set spelllang=en,ru
 
 " Basic nvigation even with russian layout
 set langmap=!\\"№\\;%?*ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;!@#$%&*`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>
+
+" Bye vi
+set nocompatible
+
+" Fuzzy search (down into subfolders)
+set path+=**
+
+" Display all matching files when tab complete
+set wildmenu
