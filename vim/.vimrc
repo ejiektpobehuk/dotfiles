@@ -1,10 +1,10 @@
 " More colours to the terminal
 set t_Co=256
 
-" Global numeration (only current raw with rnu on)
+" Global line numeration (only current line with rnu on)
 set nu
 
-" Relative Numeration
+" Relative line Numeration
 set rnu
 
 " Highlight the syntax
