@@ -25,3 +25,6 @@ set path+=**
 
 " Display all matching files when tab complete
 set wildmenu
+
+" Make Airline appear before split
+set laststatus=2
