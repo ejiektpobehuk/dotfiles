@@ -1,5 +1,6 @@
 Xcursor.theme: Breeze_Snow
 
+urxvt*font: xft:Hack:size=9:antialias=true:hinting=true
 !URxvt*font:  xft:UbuntuMono:pixelsize=5
 !URxvt*depth:                32
 !URxvt*background:            [85]#000000
@@ -12,34 +13,36 @@ URxvt*termName:    rxvt-unicode
 URxvt.urlLauncher: firefox
 !URxvt.matcher.button: 1
 
-!sets the background to black and foreground to white for other terminals relying on Xresources
-*background: #dfe2d1
-*foreground: #92a28c
+!sets the background and foreground for other terminals relying on Xresources
+*background: #fbf1c7
+*foreground: #3c3836
 
-! black
-*color0: #dfe2d1
-*color8: #b59993
+! bg
+*color0: #fbf1c7
+! gray
+*color8: #928374
 ! red
-*color1: #4b7267
-*color9: #5bc0a9
+*color1: #cc241d
+*color9: #9d0006
 ! green
-*color2: #71848d
-*color10: #69badc
+*color2: #98871a
+*color10: #7974oe
 ! yellow
-*color3: #82758c
-*color11: #be96da
+*color3: #d79921
+*color11: #b57614
 ! blue
-*color4: #8c7a5b
-*color12: #e1af5a
-! magenta
-*color5: #768c72
-*color13: #86bfad
-! cyan
-*color6: #8c6669
-*color14: #b7696e
-! white
-*color7:  #8c8c68
-*color15: #c6cd5e
+*color4: #458588
+*color12: #076678
+! purple
+*color5: #b16286
+*color13: #8f3f71
+! aqua
+*color6: #689d6a
+*color14: #427b58
+! gray
+*color7:  #7c6f64
+! fg
+*color15: #3c3836
 ! underline when default
 *colorUL: #92a28c
 ! vim: set ft=xdefaults:

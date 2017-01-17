@@ -28,3 +28,8 @@ set wildmenu
 
 " Make Airline appear before split
 set laststatus=2
+
+" Groovebox theme
+colorscheme gruvbox
+set background=light
+
