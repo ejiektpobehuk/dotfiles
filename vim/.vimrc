@@ -29,6 +29,9 @@ set wildmenu
 " Make Airline appear before split
 set laststatus=2
 
+" Airline powerline fonts
+let g:airline_powerline_fonts = 1
+
 " Groovebox theme
 colorscheme gruvbox
 set background=light
