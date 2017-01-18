@@ -1,0 +1,5 @@
+[user]
+	email = ejiek@mail.ru
+	name = Vlad Petrov
+[core]
+	excludesfile = /home/ejiek/.gitglobignore
