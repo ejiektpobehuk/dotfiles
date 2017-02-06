@@ -240,3 +240,6 @@ bindsym XF86TouchpadToggle exec "/home/ejiek/.config/i3/scripts/touchpad_toggle.
 
 # Screenshot
 bindsym Print exec gnome-screenshot -f ~/Pictures/screenshots/$(date +%F-%H:%M).png
+
+# Kbdd (kbd layout per window)
+exec --no-startup-id kbdd
