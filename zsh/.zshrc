@@ -99,3 +99,5 @@ fi
 source $ZSH/oh-my-zsh.sh
 
 source "/usr/share/vim/vimfiles/gruvbox_256palette.sh"
+
+export VISUAL="vim"
