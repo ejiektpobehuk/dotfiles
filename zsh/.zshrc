@@ -90,6 +90,10 @@ plugins=(git)
 
 alias wttr="curl wttr.in"
 alias fuck="sudo !!"
+alias sdcv='sdTranslate'
+sdTranslate() {
+	/usr/bin/sdcv --color $* | less	 
+}
 
 ZSH_CACHE_DIR=$HOME/.oh-my-zsh-cache
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
