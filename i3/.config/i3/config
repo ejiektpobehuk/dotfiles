@@ -243,3 +243,8 @@ bindsym Print exec gnome-screenshot -f ~/Pictures/screenshots/$(date +%F-%H:%M).
 
 # Kbdd (kbd layout per window)
 exec --no-startup-id kbdd
+
+# Browser
+bindsym $mod+q exec qutebrowser
+# File manager
+bindsym $mod+b exec urxvt -e ranger
