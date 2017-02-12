@@ -1,0 +1,3 @@
+#!/bin/zsh
+/usr/share/vim/vimfiles/gruvbox_256palette.sh
+ranger
