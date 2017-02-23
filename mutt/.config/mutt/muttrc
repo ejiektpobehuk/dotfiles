@@ -1,0 +1,6 @@
+source "gpg2 -dq ~/.config/mutt/.passwords.gpg |"
+source ~/.config/mutt/mailrurc
+
+set editor="vim"
+set sort = 'reverse-date'
+
