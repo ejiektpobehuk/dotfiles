@@ -30,7 +30,8 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+set $term urxvt
+bindsym $mod+Return exec $term
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -79,6 +80,13 @@ bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
+
+exec --no-startup-id $term -name dropdown 
+for_window [instance="dropdown"] floating enable;
+for_window [instance="dropdown"] move scratchpad; [instance="dropdown"] scratchpad show; move scratchpad
+
+bindsym $mod+u		[instance="dropdown"] scratchpad show
+bindsym $mod+Shift+u	resize shrink height 10 px or 10 ppt
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
