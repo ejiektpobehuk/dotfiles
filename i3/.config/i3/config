@@ -256,3 +256,6 @@ exec --no-startup-id kbdd
 bindsym $mod+q exec qutebrowser
 # File manager
 bindsym $mod+b exec urxvt -e ~/.config/i3/scripts/ranger
+
+# Lock the screen
+bindsym $mod+Control+l exec ~/.config/i3/scripts/lock.sh
