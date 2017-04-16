@@ -50,3 +50,8 @@ augroup resCur
   autocmd!
   autocmd BufWinEnter * call ResCur()
 augroup END
+
+" Tabbulation
+set autoindent		" Indent according to previous line.
+set tabstop =4		" Show existing tabulations
+set softtabstop =4	" Tab key indents by 4 spaces.
