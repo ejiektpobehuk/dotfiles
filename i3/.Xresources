@@ -1,6 +1,6 @@
 Xcursor.theme: Breeze_Snow
 
-urxvt*font: xft:Hack:size=9:antialias=true:hinting=true
+urxvt*font: xft:Droid Sans Mono for Powerline:size=9:antialias=true:hinting=true
 !URxvt*font:  xft:UbuntuMono:pixelsize=5
 !URxvt*depth:                32
 !URxvt*background:            [85]#000000
