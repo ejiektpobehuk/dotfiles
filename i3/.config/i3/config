@@ -238,7 +238,7 @@ bindsym Print exec gnome-screenshot -f ~/Pictures/screenshots/$(date +%F-%H:%M).
 exec --no-startup-id kbdd
 
 # Browser
-bindsym $mod+q exec qutebrowser
+bindsym $mod+q exec qutebrowser --backend webengine
 # File manager
 bindsym $mod+b exec urxvt -e ~/.config/i3/scripts/ranger
 
