@@ -1,0 +1,11 @@
+# The following lines were added by compinstall
+
+zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
+zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}' 'r:|[._-]=** r:|=**' 'l:|=* r:|=*'
+zstyle ':completion:*' original false
+zstyle ':completion:*' use-compctl false
+zstyle :compinstall filename '/home/ejiek/.comp'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
