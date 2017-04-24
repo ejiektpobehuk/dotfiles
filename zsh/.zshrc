@@ -8,6 +8,14 @@ bindkey -e
 
 # Aliases
 alias wttr="curl wttr.in"
+alias trans='__trans'
+alias def='__def'
+__trans() {
+	sdcv --color --data-dir /usr/share/stardict/dic/trans/ $* | less -R
+}
+__def() {
+	sdcv --color --data-dir /usr/share/stardict/dic/def/ $* | less -R
+}
 
 # Fix gruvbox
 source "/usr/share/vim/vimfiles/gruvbox_256palette.sh"
