@@ -20,7 +20,8 @@ __def() {
 # Fix gruvbox
 source "/usr/share/vim/vimfiles/gruvbox_256palette.sh"
 
-export visual="vim"
+export VISUAL="vim"
+export EDITOR="vim"
 
 #Arch wiki
 autoload -Uz compinit promptinit
