@@ -8,6 +8,7 @@ bindkey -e
 
 # Aliases
 alias wttr="curl wttr.in"
+alias la="ls -lA --color"
 alias trans='__trans'
 alias def='__def'
 __trans() {
