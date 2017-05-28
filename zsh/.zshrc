@@ -23,6 +23,7 @@ source "/usr/share/vim/vimfiles/gruvbox_256palette.sh"
 
 export VISUAL="vim"
 export EDITOR="vim"
+export BROWSER="GTK_BACKEND=wayland qutebrowser --backend webengine"
 
 #Arch wiki
 autoload -Uz compinit promptinit
