@@ -1,10 +1,14 @@
 # Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=10000
 setopt appendhistory autocd extendedglob nomatch
 bindkey -e
 # End of lines configured by zsh-newuser-install
+
+# History
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=10000
+setopt hist_ignore_all_dups
+setopt hist_ignore_space
 
 # Aliases
 alias wttr="curl wttr.in"
