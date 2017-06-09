@@ -22,6 +22,10 @@ __def() {
 	sdcv --color --data-dir /usr/share/stardict/dic/def/ $* | less -R
 }
 
+#Suffix aliases
+alias -s tex=vim
+alias -s html=qutebrowser
+
 # Fix gruvbox
 source "/usr/share/vim/vimfiles/gruvbox_256palette.sh"
 
