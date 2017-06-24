@@ -12,6 +12,7 @@ setopt hist_ignore_space
 
 # Aliases
 alias wttr="curl wttr.in"
+alias maps='telnet mapscii.me'
 alias la="ls -lA --color"
 alias trans='__trans'
 alias def='__def'
