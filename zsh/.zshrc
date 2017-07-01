@@ -14,6 +14,7 @@ setopt hist_ignore_space
 alias wttr="curl wttr.in"
 alias maps='telnet mapscii.me'
 alias la="ls -lA --color"
+alias tmux="tmux -2"
 alias trans='__trans'
 alias def='__def'
 __trans() {
