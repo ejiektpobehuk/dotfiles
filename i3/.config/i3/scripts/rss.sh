@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-COUNT=$(newsbeuter -r -x print-unread | awk '{ print $1 }' )
+COUNT=$(newsbeuter -x reload print-unread | awk '{ print $1 }' )
 if [[ COUNT -gt 0 ]]; then
 	echo -ne "<span color='#fe8019'> \uf1ea </span> $COUNT"
 else
