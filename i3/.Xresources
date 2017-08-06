@@ -10,8 +10,12 @@ URxvt*scrollBar:  false
 URxvt*saveLines:  5000
 URxvt*termName:    rxvt-unicode
 !URxvt.perl-ext-common: default,matcher
+URxvt.perl-ext-common: resize-font
 URxvt.urlLauncher: firefox
 !URxvt.matcher.button: 1
+
+URxvt.iso14755: false
+URxvt.iso14755_52: false
 
 !sets the background and foreground for other terminals relying on Xresources
 *background: #fbf1c7
