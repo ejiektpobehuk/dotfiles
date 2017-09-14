@@ -30,7 +30,7 @@ font pango:Hack 10
 floating_modifier $mod
 
 # start a terminal
-set $term urxvt
+set $term urxvtc
 bindsym $mod+Return exec $term
 
 # kill focused window
@@ -260,6 +260,9 @@ bindsym XF86ScreenSaver exec --no-startup-id ~/.config/i3/scripts/lock.sh
 
 # Screenshot
 bindsym Print exec gnome-screenshot -f ~/Pictures/screenshots/$(date +%F-%H:%M).png
+
+# urxvt daemon
+exec --no-startup-id urxvtd
 
 # Kbdd (kbd layout per window)
 exec --no-startup-id kbdd
