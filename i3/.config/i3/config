@@ -107,18 +107,6 @@ bindsym $mod+Control+Right workspace next
 bindsym $mod+Control+k workspace prev
 bindsym $mod+Control+j workspace next
 
-
-set workspace 1: 
-set workspace 2:
-set workspace 3: 
-set workspace 4: 
-set workspace 5:5 
-set workspace 6:6 
-set workspace 7:7 
-set workspace 8: 
-set workspace 9: 
-set workspace 10:
-
 # switch to workspace
 bindsym $mod+1 workspace 1: 
 bindsym $mod+2 workspace 2:
