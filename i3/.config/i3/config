@@ -207,8 +207,9 @@ for_window[class="^.*"] border pixel 0
 # Composite Manager
 exec --no-startup-id compton --config ~/.config/compton.conf
 
-# Keyboard layoutщ
+# Keyboard layout
 exec --no-startup-id setxkbmap -layout "us,ru" option "grp:caps_toggle,grp_led:caps"
+exec --no-startup-id sh -c "sleep 3; xmodmap ~/.Xmodmap"
 
 # Colours
 # class                 border  backgr. text    indicator child_border
