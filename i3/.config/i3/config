@@ -235,12 +235,15 @@ bindsym XF86KbdBrightnessUp exec "/home/ejiek/.config/i3/scripts/kbl up"
 bindsym XF86KbdBrightnessDown exec "/home/ejiek/.config/i3/scripts/kbl down"
 bindsym XF86TouchpadToggle exec "/home/ejiek/.config/i3/scripts/touchpad_toggle.sh"
 bindsym XF86ScreenSaver exec --no-startup-id ~/.config/i3/scripts/lock.sh
+# Mopidy music
+bindsym XF86AudioNext exec --no-startup-id mpc next
+bindsym XF86AudioPrev exec --no-startup-id mpc prev
+bindsym XF86AudioStop exec --no-startup-id mpc stop
+bindsym XF86AudioPlay exec --no-startup-id mpc toggle
+#
 #unused
-#XF86AudioNext
+#
 #XF86Launch1
-#XF86AudioPrev
-#XF86AudioStop
-#XF86AudioPlay
 #XF86Battery
 #XF86WakeUp XF86Sleep
 #XF86WLAN
