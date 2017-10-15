@@ -10,7 +10,7 @@ c.aliases = {
     'mpv': 'spawn mpv {url}',
     'proxy-gateway': 'set content.proxy socks://loaclahost:8118/',
     'proxy-off': 'set content.proxy system',
-    'stig-add': 'spawn stig add {url}'
+    'stig-add': 'spawn stig add {url}',
     'yt': 'open https://youtube.com/feed/subscriptions'
 }
 
