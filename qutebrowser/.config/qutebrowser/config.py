@@ -11,7 +11,7 @@ c.aliases = {
     'ff': 'spawn firefox {url}',
     'mail': 'open https://e.mail.ru/messages/inbox',
     'mpv': 'spawn mpv {url}',
-    'proxy-gateway': 'set content.proxy socks://loaclahost:8118/',
+    'proxy-gateway': 'set content.proxy socks://localhost:8118/',
     'proxy-off': 'set content.proxy system',
     'q': 'quit',
     'stig-add': 'spawn stig add {url}',
