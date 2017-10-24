@@ -10,7 +10,8 @@ URxvt*scrollBar:  false
 URxvt*saveLines:  5000
 URxvt*termName:    rxvt-unicode
 !URxvt.perl-ext-common: default,matcher
-URxvt.perl-ext-common: resize-font
+URxvt.perl-ext-common: resize-font,keyboard-select
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
 URxvt.urlLauncher: firefox
 !URxvt.matcher.button: 1
 

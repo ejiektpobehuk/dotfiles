@@ -13,7 +13,9 @@ import XMonad.Config.Desktop
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
-import XMonad.Layout.Fullscreen
+import XMonad.Layout.BinarySpacePartition
+import XMonad.Layout.Gaps
+import XMonad.Layout.Spacing
 import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeys)
 import System.IO
@@ -37,7 +39,7 @@ myClickJustFocuses = False
 
 -- Width of the window border in pixels.
 --
-myBorderWidth   = 1
+myBorderWidth   = 3
 
 -- modMask lets you specify which modkey you want to use. The default
 -- is mod1Mask ("left alt").  You may also consider using mod3Mask
@@ -59,8 +61,8 @@ myWorkspaces    = ["1","2","3","4","5","6","7","8","9"]
 
 -- Border colors for unfocused and focused windows, respectively.
 --
-myNormalBorderColor  = "#fbf1c7"
-myFocusedBorderColor = "#3c3836"
+myNormalBorderColor  = "#ebdbb2"
+myFocusedBorderColor = "#fbf1c7"
 
 ------------------------------------------------------------------------
 -- Key bindings. Add, modify or remove key bindings here.
@@ -95,10 +97,12 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,               xK_Tab   ), windows W.focusDown)
 
     -- Move focus to the next window
-    , ((modm,               xK_j     ), windows W.focusDown)
+    --, ((modm,               xK_j     ), windows W.focusDown)
+    , ((modm,               xK_j     ), sendMessage $ ExpandTowards D )
 
     -- Move focus to the previous window
-    , ((modm,               xK_k     ), windows W.focusUp  )
+    --, ((modm,               xK_k     ), windows W.focusUp  )
+    , ((modm,               xK_k     ), sendMessage $ ExpandTowards U )
 
     -- Move focus to the master window
     , ((modm,               xK_m     ), windows W.focusMaster  )
@@ -113,10 +117,12 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm .|. shiftMask, xK_k     ), windows W.swapUp    )
 
     -- Shrink the master area
-    , ((modm,               xK_h     ), sendMessage Shrink)
+    --, ((modm,               xK_h     ), sendMessage Shrink)
+    , ((modm,               xK_h     ), sendMessage $ ExpandTowards L )
 
     -- Expand the master area
-    , ((modm,               xK_l     ), sendMessage Expand)
+    --, ((modm,               xK_l     ), sendMessage Expand)
+    , ((modm,               xK_l     ), sendMessage $ ExpandTowards R )
 
     -- Push window back into tiling
     , ((modm,               xK_t     ), withFocused $ windows . W.sink)
@@ -192,19 +198,21 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 -- The available layouts.  Note that each layout is separated by |||,
 -- which denotes layout choice.
 --
-myLayout = tiled ||| Mirror tiled ||| Full
-  where
-     -- default tiling algorithm partitions the screen into two panes
-     tiled   = Tall nmaster delta ratio
 
-     -- The default number of windows in the master pane
-     nmaster = 1
-
-     -- Default proportion of screen occupied by master pane
-     ratio   = 1/2
-
-     -- Percent of screen to increment by when resizing panes
-     delta   = 3/100
+myLayout = spacing 10 $ gaps [(U,10), (D,10), (L,10), (R,10)] $ emptyBSP
+-- myLayout = tiled ||| Mirror tiled ||| Full
+--   where
+--      -- default tiling algorithm partitions the screen into two panes
+--      tiled   = Tall nmaster delta ratio
+-- 
+--      -- The default number of windows in the master pane
+--      nmaster = 1
+-- 
+--      -- Default proportion of screen occupied by master pane
+--      ratio   = 1/2
+-- 
+--      -- Percent of screen to increment by when resizing panes
+--      delta   = 3/100
 
 ------------------------------------------------------------------------
 -- Window rules:
@@ -296,10 +304,10 @@ defaults = def {
 
 -- Xmonbar
 myBar = "xmobar"
-myPP = xmobarPP { ppCurrent = xmobarColor "#cc342b" ""
+myPP = xmobarPP { ppCurrent = xmobarColor "#689d6a" ""
                      , ppHidden = xmobarColor "#373b41" ""
                      , ppHiddenNoWindows = xmobarColor "#c5c8c6" ""
-                     , ppUrgent = xmobarColor "#198844" ""
+                     , ppUrgent = xmobarColor "#d65d0e" ""
                      , ppLayout = xmobarColor "#c5c8c6" ""
                      , ppTitle =  xmobarColor "#373b41" "" . shorten 80
                      , ppSep = xmobarColor "#c5c8c6" "" "  "
