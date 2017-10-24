@@ -3,6 +3,9 @@ c.backend = 'webengine'
 c.editor.command = ['urxvt', '-e /home/ejiek/.config/qutebrowser/vim', '{}']
 c.editor.encoding = 'utf-8'
 
+c.downloads.location.directory = '~/Downvotes'
+c.downloads.location.prompt = False
+
 c.aliases = {
     'arch': 'open https://archlinux.org',
     'ff': 'spawn firefox {url}',
