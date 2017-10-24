@@ -18,6 +18,7 @@ import XMonad.Layout.Gaps
 import XMonad.Layout.Spacing
 import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeys)
+import Graphics.X11.ExtraTypes.XF86
 import System.IO
 import System.Exit
 
@@ -138,6 +139,11 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- See also the statusBar function from Hooks.DynamicLog.
     --
     -- , ((modm              , xK_b     ), sendMessage ToggleStruts)
+
+	-- Media keys
+    , ((0,     xF86XK_AudioMute            ), spawn "pamixer -t")
+    , ((0,     xF86XK_AudioLowerVolume     ), spawn "pamixer -d 1")
+    , ((0,     xF86XK_AudioRaiseVolume     ), spawn "pamixer -i 1")
 
     -- Quit xmonad
     , ((modm .|. shiftMask, xK_q     ), io (exitWith ExitSuccess))
