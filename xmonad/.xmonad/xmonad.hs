@@ -9,6 +9,14 @@
 
 import XMonad
 import Data.Monoid
+import XMonad.Config.Desktop
+import XMonad.Hooks.EwmhDesktops
+import XMonad.Hooks.DynamicLog
+import XMonad.Hooks.ManageDocks
+import XMonad.Layout.Fullscreen
+import XMonad.Util.Run(spawnPipe)
+import XMonad.Util.EZConfig(additionalKeys)
+import System.IO
 import System.Exit
 
 import qualified XMonad.StackSet as W
@@ -61,6 +69,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     -- launch a terminal
     [ ((modm .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
+
+    -- launch qutebrowser
+    , ((modm,               xK_q     ), spawn "qutebrowser")
 
     -- launch dmenu
     , ((modm,               xK_p     ), spawn "dmenu_run")
@@ -126,7 +137,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm .|. shiftMask, xK_q     ), io (exitWith ExitSuccess))
 
     -- Restart xmonad
-    , ((modm              , xK_q     ), spawn "xmonad --recompile; xmonad --restart")
+    , ((modm .|. shiftMask, xK_e     ), spawn "xmonad --recompile; xmonad --restart")
 
     -- Run xmessage with a summary of the default keybindings (useful for beginners)
     , ((modm .|. shiftMask, xK_slash ), spawn ("echo \"" ++ help ++ "\" | xmessage -file -"))
@@ -214,7 +225,7 @@ myManageHook = composeAll
     [ className =? "MPlayer"        --> doFloat
     , className =? "Gimp"           --> doFloat
     , resource  =? "desktop_window" --> doIgnore
-    , resource  =? "kdesktop"       --> doIgnore ]
+    , resource  =? "kdesktop"       --> doIgnore ] 
 
 ------------------------------------------------------------------------
 -- Event handling
@@ -250,7 +261,9 @@ myStartupHook = return ()
 
 -- Run xmonad with the settings you specify. No need to modify this.
 --
-main = xmonad defaults
+-- main = do
+-- mproc <- spawnPipe "/usr/bin/xmobar /home/ejiek/.config/xmobarrc"
+main = xmonad =<< statusBar myBar myPP toggleStrutsKey (ewmh $ defaults)
 
 -- A structure containing your configuration settings, overriding
 -- fields in the default config. Any you don't override, will
@@ -280,6 +293,19 @@ defaults = def {
         logHook            = myLogHook,
         startupHook        = myStartupHook
     }
+
+-- Xmonbar
+myBar = "xmobar"
+myPP = xmobarPP { ppCurrent = xmobarColor "#cc342b" ""
+                     , ppHidden = xmobarColor "#373b41" ""
+                     , ppHiddenNoWindows = xmobarColor "#c5c8c6" ""
+                     , ppUrgent = xmobarColor "#198844" ""
+                     , ppLayout = xmobarColor "#c5c8c6" ""
+                     , ppTitle =  xmobarColor "#373b41" "" . shorten 80
+                     , ppSep = xmobarColor "#c5c8c6" "" "  "
+                     }
+
+toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)
 
 -- | Finally, a copy of the default bindings in simple textual tabular format.
 help :: String
