@@ -77,6 +77,8 @@ c.colors.tabs.selected.even.fg = '#3c3836'
 c.colors.tabs.selected.even.bg = '#fbf1c7'
 
 c.colors.downloads.bar.bg = '#3c3836'
+c.colors.downloads.start.bg = '#458588'
+c.colors.downloads.stop.bg = '#98971a'
 c.colors.webpage.bg = '#fbf1c7'
 
 c.colors.messages.error.fg = '#3c3836'
