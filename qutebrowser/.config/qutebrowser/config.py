@@ -27,6 +27,7 @@ c.url.searchengines = {
     'aur': 'https://aur.archlinux.org/packages/?O=0&K={}',
     'avito': 'https://www.avito.ru/sankt-peterburg?q={}',
     'aw': 'https://wiki.archlinux.org/?search={}',
+	'crates': 'https://crates.io/search?q={}',
     'do': 'https://www.digitalocean.com/community/search?q={}',
     'ebay': 'https://www.ebay.com/sch/items/?_nkw={}',
     'g': 'https://www.google.com/search?hl=en&q={}',
