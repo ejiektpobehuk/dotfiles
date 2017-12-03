@@ -16,6 +16,7 @@ import XMonad.Hooks.ManageDocks
 import XMonad.Layout.BinarySpacePartition
 import XMonad.Layout.Gaps
 import XMonad.Layout.Spacing
+import XMonad.Actions.CycleWS
 import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeys)
 import Graphics.X11.ExtraTypes.XF86
@@ -48,6 +49,7 @@ myBorderWidth   = 3
 -- "windows key" is usually mod4Mask.
 --
 myModMask       = mod4Mask
+altMask         = mod1Mask
 
 -- The default number of workspaces (virtual screens) and their names.
 -- By default we use numeric strings, but any string may be used as a
@@ -98,12 +100,16 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,               xK_Tab   ), windows W.focusDown)
 
     -- Move focus to the next window
-    --, ((modm,               xK_j     ), windows W.focusDown)
-    , ((modm,               xK_j     ), sendMessage $ ExpandTowards D )
+    , ((modm,               xK_j     ), windows W.focusDown)
+
+	-- Adjust size vertically 
+    , ((modm .|. controlMask, xK_j     ), sendMessage $ ExpandTowards D )
 
     -- Move focus to the previous window
-    --, ((modm,               xK_k     ), windows W.focusUp  )
-    , ((modm,               xK_k     ), sendMessage $ ExpandTowards U )
+    , ((modm,               xK_k     ), windows W.focusUp  )
+
+	-- Adjust size vertically 
+    , ((modm .|. controlMask, xK_k     ), sendMessage $ ExpandTowards U )
 
     -- Move focus to the master window
     , ((modm,               xK_m     ), windows W.focusMaster  )
@@ -112,10 +118,10 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,               xK_Return), windows W.swapMaster)
 
     -- Swap the focused window with the next window
-    , ((modm .|. shiftMask, xK_j     ), windows W.swapDown  )
+    , ((modm .|. altMask, xK_j     ), windows W.swapDown  )
 
     -- Swap the focused window with the previous window
-    , ((modm .|. shiftMask, xK_k     ), windows W.swapUp    )
+    , ((modm .|. altMask, xK_k     ), windows W.swapUp    )
 
     -- Shrink the master area
     --, ((modm,               xK_h     ), sendMessage Shrink)
@@ -144,6 +150,12 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,     xF86XK_AudioMute            ), spawn "pamixer -t")
     , ((0,     xF86XK_AudioLowerVolume     ), spawn "pamixer -d 1")
     , ((0,     xF86XK_AudioRaiseVolume     ), spawn "pamixer -i 1")
+
+	-- Switch to next workspace
+    , ((modm .|. shiftMask, xK_j     ), moveTo Next NonEmptyWS )
+
+	-- Switch to previous workspace
+    , ((modm .|. shiftMask, xK_k     ), moveTo Prev NonEmptyWS )
 
     -- Quit xmonad
     , ((modm .|. shiftMask, xK_q     ), io (exitWith ExitSuccess))
