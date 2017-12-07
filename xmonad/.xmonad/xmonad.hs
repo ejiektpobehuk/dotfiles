@@ -87,6 +87,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 	-- lock screen
     , ((modm .|. shiftMask, xK_l     ), spawn "i3lock" )
 
+	-- show time
+    , ((modm .|. shiftMask, xK_t     ), spawn "~/.xmonad/scripts/time.sh")
+
     -- close focused window
     , ((modm .|. shiftMask, xK_c     ), kill)
 
