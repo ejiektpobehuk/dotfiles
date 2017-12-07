@@ -147,9 +147,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- , ((modm              , xK_b     ), sendMessage ToggleStruts)
 
 	-- Media keys
-    , ((0,     xF86XK_AudioMute            ), spawn "pamixer -t")
-    , ((0,     xF86XK_AudioLowerVolume     ), spawn "pamixer -d 1")
-    , ((0,     xF86XK_AudioRaiseVolume     ), spawn "pamixer -i 1")
+    , ((0,     xF86XK_AudioMute            ), spawn "~/.xmonad/scripts/volume.sh mute")
+    , ((0,     xF86XK_AudioLowerVolume     ), spawn "~/.xmonad/scripts/volume.sh down")
+    , ((0,     xF86XK_AudioRaiseVolume     ), spawn "~/.xmonad/scripts/volume.sh up")
 
 	-- Switch to next workspace
     , ((modm .|. shiftMask, xK_j     ), moveTo Next NonEmptyWS )
