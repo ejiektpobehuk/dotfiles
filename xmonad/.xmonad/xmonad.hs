@@ -223,7 +223,7 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 -- which denotes layout choice.
 --
 
-myLayout = spacing 10 $ gaps [(U,10), (D,10), (L,10), (R,10)] $ emptyBSP
+myLayout = smartSpacingWithEdge 10 $ emptyBSP
 -- myLayout = tiled ||| Mirror tiled ||| Full
 --   where
 --      -- default tiling algorithm partitions the screen into two panes
