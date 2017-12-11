@@ -38,7 +38,9 @@ c.url.searchengines = {
     'maps': 'https://openstreetmap.org/search?query={}',
     'market': 'https://market.yandex.ru/search?cvredirect=2&text={}&local-offers-first=1',
     'rcgo': 'https://rc-go.ru/search/?s={}',
+	'reddit': 'https://reddit.com/search?q={}',
     'tpb': 'https://thepiratebay.org/search/{}',
+	'unixporn': 'https://www.reddit.com/r/unixporn/search?q={}&restrict_sr=on',
     'w': 'https://en.wikipedia.org/?search={}',
     'ya': 'https://yandex.ru/search/?lr=2&text={}',
     'yt': 'https://youtube.com/results?search_query={}'
