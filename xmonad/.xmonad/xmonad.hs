@@ -16,6 +16,7 @@ import XMonad.Hooks.ManageDocks
 import XMonad.Layout.BinarySpacePartition
 import XMonad.Layout.Gaps
 import XMonad.Layout.Spacing
+import XMonad.Layout.NoBorders
 import XMonad.Actions.CycleWS
 import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeys)
@@ -223,7 +224,7 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 -- which denotes layout choice.
 --
 
-myLayout = smartSpacingWithEdge 10 $ emptyBSP
+myLayout = smartSpacingWithEdge 10 $ smartBorders $ emptyBSP
 -- myLayout = tiled ||| Mirror tiled ||| Full
 --   where
 --      -- default tiling algorithm partitions the screen into two panes
