@@ -296,7 +296,7 @@ myStartupHook = return ()
 --
 -- main = do
 -- mproc <- spawnPipe "/usr/bin/xmobar /home/ejiek/.config/xmobarrc"
-main = xmonad =<< statusBar myBar myPP toggleStrutsKey (ewmh $ defaults)
+main = xmonad $ ewmh $ defaults
 
 -- A structure containing your configuration settings, overriding
 -- fields in the default config. Any you don't override, will
@@ -326,19 +326,6 @@ defaults = def {
         logHook            = myLogHook,
         startupHook        = myStartupHook
     }
-
--- Xmonbar
-myBar = "xmobar"
-myPP = xmobarPP { ppCurrent = xmobarColor "#689d6a" ""
-                     , ppHidden = xmobarColor "#373b41" ""
-                     , ppHiddenNoWindows = xmobarColor "#c5c8c6" ""
-                     , ppUrgent = xmobarColor "#d65d0e" ""
-                     , ppLayout = xmobarColor "#c5c8c6" ""
-                     , ppTitle =  xmobarColor "#373b41" "" . shorten 80
-                     , ppSep = xmobarColor "#c5c8c6" "" "  "
-                     }
-
-toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)
 
 -- | Finally, a copy of the default bindings in simple textual tabular format.
 help :: String
