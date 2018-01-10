@@ -59,3 +59,6 @@ set softtabstop =4	" Tab key indents by 4 spaces.
 " Aliases
 " Save with root permissions
 cnoremap w!! w !sudo tee > /dev/null %
+
+" Enables vim-rust :Rust* commands
+filetype plugin on
