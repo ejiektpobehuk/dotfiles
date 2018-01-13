@@ -7,7 +7,7 @@ function send_notification {
     volume=$(pamixer --get-volume)
     bar=$(seq -s "─" $(($volume / 3)) | sed 's/[0-9]//g')
     # Send the notification
-    dunstify -i audio-volume-high-symbolic -t 8 -r 2593 -u normal "    $bar"
+    dunstify -i audio-volume-high-symbolic -r 2593 -u low "    $bar"
 }
 
 case $1 in
@@ -26,7 +26,7 @@ case $1 in
     mute)
 	pamixer -t > /dev/null
 	if is_mute ; then
-	    dunstify -i audio-volume-muted-symbolic -t 8 -r 2593 -u normal "    Mute"
+	    dunstify -i audio-volume-muted-symbolic -r 2593 -u low "    Mute"
 	else
 	    send_notification
 	fi

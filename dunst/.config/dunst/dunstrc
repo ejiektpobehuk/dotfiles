@@ -15,7 +15,7 @@
     #
     # If this option is set to mouse or keyboard, the monitor option
     # will be ignored.
-    follow = mouse
+    follow = none
 
     # The geometry of the window:
     #   [{width}]x{height}[+/-{x}+/-{y}]
@@ -159,7 +159,7 @@
     max_icon_size = 32
 
     # Paths to default icons.
-    icon_folders = /usr/share/icons/Arc/status/symbolic/:/usr/share/icons/Arc/devices/symbolic/
+    icon_folders = /usr/share/icons/Arc/status/symbolic/:/usr/share/icons/Arc/devices/symbolic/:/usr/share/icons/Arc/apps/24/
 
     ### History ###
 
@@ -239,9 +239,9 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#222222"
-    foreground = "#888888"
-    timeout = 10
+    background = "#ebdbb2"
+    foreground = "#282828"
+    timeout = 1
     # Icon for notifications with low urgency, uncomment to enable
     #icon = /path/to/icon
 
