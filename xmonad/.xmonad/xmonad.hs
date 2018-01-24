@@ -164,6 +164,12 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 	-- Switch to previous workspace
     , ((modm .|. shiftMask, xK_k     ), moveTo Prev NonEmptyWS )
 
+	-- Message for rotating a split (horizontal/vertical) in the BSP
+    , ((modm              , xK_r     ), sendMessage Rotate )
+
+	-- Message for swapping the left child of a split with the right child of split
+    , ((modm              , xK_s     ), sendMessage Swap )
+
     -- Quit xmonad
     , ((modm .|. shiftMask, xK_q     ), io (exitWith ExitSuccess))
 
@@ -189,7 +195,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- mod-shift-{w,e,r}, Move client to screen 1, 2, or 3
     --
     [((m .|. modm, key), screenWorkspace sc >>= flip whenJust (windows . f))
-        | (key, sc) <- zip [xK_w, xK_e, xK_r] [0..]
+        | (key, sc) <- zip [xK_w, xK_e] [0..]
         , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]
 
 
