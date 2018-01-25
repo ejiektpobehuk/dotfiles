@@ -16,6 +16,7 @@ alias maps='telnet mapscii.me'
 alias la="ls -lA --color"
 alias tmux="tmux -2"
 alias suspendless="systemd-inhibit --what=handle-lid-switch sleep"
+alias add-deleted="git status | grep 'deleted' | awk '{ print $2 }' | xargs git add"
 alias trans='__trans'
 alias def='__def'
 __trans() {
