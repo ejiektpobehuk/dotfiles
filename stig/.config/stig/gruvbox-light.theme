@@ -46,8 +46,8 @@ tabs.unfocused                white        on black
 tabs.focused                  black        on white
 tabs.torrentlist.unfocused    dark cyan    on black
 tabs.torrentlist.focused      #d50        on black
-tabs.torrentdetails.unfocused light blue   on dark gray
-tabs.torrentdetails.focused   black        on light blue
+tabs.torrentsummary.unfocused light blue   on dark gray
+tabs.torrentsummary.focused   black        on light blue
 tabs.filelist.unfocused       dark magenta on dark gray
 tabs.filelist.focused         black        on dark magenta
 tabs.peerlist.unfocused       dark blue   on black
@@ -370,7 +370,7 @@ torrentlist.name.discovering.complete.focused      $name.discovering_fg         
 
 
 
-torrentdetails light gray on black
+torrentsummary light gray on black
 
 
 
@@ -423,8 +423,8 @@ filelist.priority.low.unfocused            $priority_fg           on $flist_bg.u
 filelist.priority.low.focused              $priority_fg           on $flist_bg.f
 filelist.priority.high.unfocused           $priority_hl           on $flist_bg.uf
 filelist.priority.high.focused             $priority_hl           on $flist_bg.f
-filelist.priority.shun.unfocused           dark blue              on $flist_bg.uf
-filelist.priority.shun.focused             dark blue              on $flist_bg.f
+filelist.priority.off.unfocused            dark blue              on $flist_bg.uf
+filelist.priority.off.focused              dark blue              on $flist_bg.f
 
 
 $plist_bg = black
@@ -433,8 +433,8 @@ peerlist.focused                              default              on $plist_bg
 peerlist.header                               light gray,underline on $plist_bg
 
 $name_fg = light gray
-peerlist.name.header                          $name_fg,underline on $plist_bg
-peerlist.name.unfocused                       $name_fg           on $plist_bg
+peerlist.torrent.header                       $name_fg,underline on $plist_bg
+peerlist.torrent.unfocused                    $name_fg           on $plist_bg
 
 $ip_fg = light gray
 peerlist.ip.header                            $ip_fg,underline on $plist_bg
