@@ -62,3 +62,7 @@ cnoremap w!! w !sudo tee > /dev/null %
 
 " Enables vim-rust :Rust* commands
 filetype plugin on
+
+" spell check highlighting
+hi clear SpellBad
+hi SpellBad cterm=underline
