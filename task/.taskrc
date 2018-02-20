@@ -13,11 +13,8 @@
 # Files
 data.location=~/.task
 
-taskd.certificate=/home/ejiek/.task/ejiek.cert.pem
-taskd.key=/home/ejiek/.task/ejiek.key.pem
-taskd.ca=/home/ejiek/.task/ca.cert.pem
-taskd.server=ejiek.com:51341
-taskd.credentials=personal/ejiek/87e02e3b-3e59-4e58-b701-d2b12754d27d
+# Credentials and certs
+include ~/.task/secrets
 
 # Color
 #color = on
