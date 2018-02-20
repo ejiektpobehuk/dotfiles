@@ -95,3 +95,9 @@ color.sync.rejected=color13
 color.undo.after=color2
 color.undo.before=color1
 
+urgency.user.tag.in.coefficient=15.0
+
+report.in.columns           = id,description
+report.in.description       = Inbox
+report.in.filter            = status:pending limit:page (+in)
+report.in.labels            = ID,Description
