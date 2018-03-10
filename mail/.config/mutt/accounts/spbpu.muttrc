@@ -1,0 +1,29 @@
+# vim: filetype=neomuttrc
+# muttrc file for account spbpu
+set realname = "Vladislav Petrov"
+set from = "vladislav.petrov@spbpu.com"
+set smtp_url = "smtp://vladislav.petrov@spbpu.com@smtp.mail.ru:465/"
+set sendmail = "/usr/bin/msmtp -a spbpu"
+set folder = "~/.mail/spbpu"
+set header_cache = ~/.config/mutt/accounts/spbpu/cache/headers
+set message_cachedir = ~/.config/mutt/accounts/spbpu/cache/bodies
+set certificate_file = ~/.config/mutt/accounts/spbpu/certificates
+source "~/.config/mutt/credentials/getmuttpass spbpu |"
+
+set mbox_type = Maildir
+set ssl_starttls = yes
+set ssl_force_tls = yes
+
+bind index,pager gg noop
+bind index,pager g noop
+bind index gg first-entry
+unmailboxes *
+mailboxes =spbpu =------------------- "=sent" "=drafts" "=spam" "=inbox" "=trash"
+macro index,pager gi "<change-folder>=inbox<enter>" "Go to inbox."
+macro index,pager gs "<change-folder>=sent<enter>" "Go to sent."
+macro index,pager gd "<change-folder>=drafts<enter>" "Go to drafts."
+macro index,pager gt "<change-folder>=trash<enter>" "Go to trash."
+macro index,pager gS "<change-folder>=spam<enter>" "Go to spam."
+set spoolfile = "+inbox"
+set record = "+sent"
+set postponed = "+drafts"

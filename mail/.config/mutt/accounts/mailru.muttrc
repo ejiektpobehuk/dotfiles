@@ -1,0 +1,28 @@
+# vim: filetype=neomuttrc
+# muttrc file for account mailru
+set realname = "ejiek"
+set from = "ejiek@mail.ru"
+set smtp_url = "smtp://ejiek@mail.ru@smtp.mail.ru:465/"
+set sendmail = "/usr/bin/msmtp -a mailru"
+set folder = "~/.mail/mailru"
+set header_cache = ~/.config/mutt/accounts/mailru/cache/headers
+set message_cachedir = ~/.config/mutt/accounts/mailru/cache/bodies
+set certificate_file = ~/.config/mutt/accounts/mailru/certificates
+source "~/.config/mutt/credentials/getmuttpass mailru |"
+
+set mbox_type = Maildir
+set ssl_starttls = yes
+set ssl_force_tls = yes
+
+bind index,pager gg noop
+bind index,pager g noop
+bind index gg first-entry
+unmailboxes *
+mailboxes =mailru =------------------- "=INBOX.OwnCloud" "=Drafts" "=INBOX.Guyz" "=INBOX.bills" "=Shops.ulmart" "=INBOX.OctoCoders" "=Shops.Humble Bundle" "=ricksubroll" "=alert.job" "=&BB4EQgQ,BEAEMAQyBDsENQQ9BD0ESwQ1-" "=&BBoEPgRABDcEOAQ9BDA-" "=&BCEEPwQwBDw-" "=INBOX.PolyJob" "=INBOX" "=Shops.ali" "=&BCcENQRABD0EPgQyBDgEOgQ4-" "=alert" "=Shops.steam" "=INBOX.HabraScum" "=Shops" "=INBOX.Poly" "=INBOX.IEEE" "=INBOX.GitHub" "=Shops.amazon" "=Shops.GOG" "=Elab" "=sent" "=spam" "=inbox" "=drafts"
+macro index,pager gi "<change-folder>=alert<enter>" "Go to inbox."
+macro index,pager gs "<change-folder>=sent<enter>" "Go to sent."
+macro index,pager gd "<change-folder>=Drafts<enter>" "Go to drafts."
+macro index,pager gS "<change-folder>=spam<enter>" "Go to spam."
+set spoolfile = "+alert"
+set record = "+sent"
+set postponed = "+Drafts"
