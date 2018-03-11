@@ -26,6 +26,16 @@ __def() {
 	sdcv --color --data-dir /usr/share/stardict/dic/def/ $* | less -R
 }
 
+# Aliases for taskwarrior
+alias in='task add +in'
+alias tick='__tickle'
+alias think='__tickle +1d'
+__tickle () {
+    deadline=$1
+    shift
+    in +tickle wait:$deadline $@
+}
+
 #Suffix aliases
 alias -s tex=vim
 alias -s html=qutebrowser
