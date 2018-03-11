@@ -159,10 +159,10 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,     xF86XK_AudioRaiseVolume     ), spawn "~/.xmonad/scripts/volume.sh up")
 
 	-- Switch to next workspace
-    , ((modm .|. shiftMask, xK_j     ), moveTo Next NonEmptyWS )
+    , ((modm .|. shiftMask, xK_j     ), moveTo Next HiddenNonEmptyWS )
 
 	-- Switch to previous workspace
-    , ((modm .|. shiftMask, xK_k     ), moveTo Prev NonEmptyWS )
+    , ((modm .|. shiftMask, xK_k     ), moveTo Prev HiddenNonEmptyWS )
 
 	-- Message for rotating a split (horizontal/vertical) in the BSP
     , ((modm              , xK_r     ), sendMessage Rotate )
