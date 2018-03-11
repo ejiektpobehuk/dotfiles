@@ -39,6 +39,8 @@ __tickle () {
 #Suffix aliases
 alias -s tex=vim
 alias -s html=qutebrowser
+alias -s png=sxiv
+alias -s jpg=sxiv
 
 # Fix gruvbox
 source "/usr/share/vim/vimfiles/gruvbox_256palette.sh"
