@@ -49,9 +49,6 @@ alias -s html=qutebrowser
 alias -s png=sxiv
 alias -s jpg=sxiv
 
-# Fix gruvbox
-source "/usr/share/vim/vimfiles/gruvbox_256palette.sh"
-
 export VISUAL="vim"
 export EDITOR="vim"
 export BROWSER="GTK_BACKEND=wayland qutebrowser --backend webengine"

@@ -66,3 +66,6 @@ filetype plugin on
 " spell check highlighting
 hi clear SpellBad
 hi SpellBad cterm=underline
+
+" fix gruvbox color
+set termguicolors
