@@ -26,6 +26,12 @@ __def() {
 	sdcv --color --data-dir /usr/share/stardict/dic/def/ $* | less -R
 }
 
+# oui lookup
+alias oui='__oui'
+__oui() {
+	grep $* -i /usr/share/nmap/nmap-mac-prefixes
+}
+
 # Aliases for taskwarrior
 alias in='task add +in'
 alias tick='__tickle'
