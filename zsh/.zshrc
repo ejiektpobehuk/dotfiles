@@ -35,6 +35,7 @@ __oui() {
 # Aliases for taskwarrior
 alias in='task add +in'
 alias tick='__tickle'
+alias ssproxy='ssh -D 8118 -C -N'
 alias think='__tickle +1d'
 __tickle () {
     deadline=$1
