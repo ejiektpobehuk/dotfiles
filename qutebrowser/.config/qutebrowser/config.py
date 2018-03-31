@@ -34,6 +34,7 @@ c.url.searchengines = {
     'github': 'https://github.com/search?utf8=/%E2%9C%93&q={}&type=',
     'gmaps': 'https://www.google.ru/maps/search/{}',
     'gw': 'https://wiki.gentoo.org/?search={}',
+    'ikea': 'https://www.ikea.com/ru/ru/search/?query={}',
     'imdb': 'http://www.imdb.com/find?ref_=nv_sr_fn&q={}&s=all',
     'maps': 'https://openstreetmap.org/search?query={}',
     'market': 'https://market.yandex.ru/search?cvredirect=2&text={}&local-offers-first=1',
