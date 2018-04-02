@@ -7,12 +7,10 @@ rofi.color-normal:      argb:00333333, #ffffff, argb:00333333, argb:00333333, ar
 rofi.color-urgent:      argb:00333333, #ffffff, argb:00333333, argb:00333333, argb:ffefa211
 rofi.color-active:      argb:00333333, #ffffff, argb:00333333, argb:00333333, argb:ffefa211
 rofi.separator-style:   solid
-rofi.fullscreen:        false
-rofi.padding:           720
-rofi.lines:				19
+rofi.fullscreen:		true
+rofi.padding:			500
 rofi.hide-scrollbar:    true
 rofi.line-margin:       5
 rofi.fake-transparency: false
-rofi.width:				2560
 rofi.opacity:           90
 rofi.font:				Hack 12
