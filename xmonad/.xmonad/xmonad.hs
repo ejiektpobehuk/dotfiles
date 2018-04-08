@@ -80,7 +80,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,               xK_q     ), spawn "qutebrowser")
 
     -- launch rofi
-    , ((modm,               xK_p     ), spawn "rofi -modi 'run,ssh,window' -show run")
+    , ((modm,               xK_p     ), spawn "rofi -modi 'drun,ssh,window' -show drun")
 
     -- launch gmrun
     , ((modm .|. shiftMask, xK_p     ), spawn "gmrun")
