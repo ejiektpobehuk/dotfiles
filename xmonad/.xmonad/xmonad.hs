@@ -91,6 +91,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 	-- show time
     , ((modm .|. shiftMask, xK_t     ), spawn "~/.xmonad/scripts/time.sh")
 
+    -- call rofi-pass
+    , ((modm .|. altMask,   xK_p     ), spawn "rofi-pass")
+
     -- close focused window
     , ((modm .|. shiftMask, xK_c     ), kill)
 
