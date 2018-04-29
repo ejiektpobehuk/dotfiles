@@ -52,6 +52,7 @@ alias -s jpg=sxiv
 export VISUAL="vim"
 export EDITOR="vim"
 export BROWSER="GTK_BACKEND=wayland qutebrowser --backend webengine"
+export TERMINAL="alacritty"
 
 #Arch wiki
 autoload -Uz compinit promptinit
