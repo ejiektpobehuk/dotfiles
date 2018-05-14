@@ -92,6 +92,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- show time
     , ((modm .|. shiftMask, xK_t     ), spawn "~/.xmonad/scripts/time.sh")
 
+    -- show lifebar
+    , ((modm,               xK_b     ), spawn "healthbar")
+
     -- call rofi-pass
     , ((modm .|. altMask,   xK_p     ), spawn "rofi-pass")
 
