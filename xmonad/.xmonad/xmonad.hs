@@ -85,10 +85,10 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- launch gmrun
     , ((modm .|. shiftMask, xK_p     ), spawn "gmrun")
 
-	-- lock screen
+    -- lock screen
     , ((modm .|. shiftMask, xK_l     ), spawn "i3lock -i ~/Pictures/lock" )
 
-	-- show time
+    -- show time
     , ((modm .|. shiftMask, xK_t     ), spawn "~/.xmonad/scripts/time.sh")
 
     -- call rofi-pass
@@ -112,13 +112,13 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- Move focus to the next window
     , ((modm,               xK_j     ), windows W.focusDown)
 
-	-- Adjust size vertically 
+    -- Adjust size vertically 
     , ((modm .|. controlMask, xK_j     ), sendMessage $ ExpandTowards D )
 
     -- Move focus to the previous window
     , ((modm,               xK_k     ), windows W.focusUp  )
 
-	-- Adjust size vertically 
+    -- Adjust size vertically 
     , ((modm .|. controlMask, xK_k     ), sendMessage $ ExpandTowards U )
 
     -- Move focus to the master window
@@ -156,21 +156,21 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     --
     -- , ((modm              , xK_b     ), sendMessage ToggleStruts)
 
-	-- Media keys
+    -- Media keys
     , ((0,     xF86XK_AudioMute            ), spawn "~/.xmonad/scripts/volume.sh mute")
     , ((0,     xF86XK_AudioLowerVolume     ), spawn "~/.xmonad/scripts/volume.sh down")
     , ((0,     xF86XK_AudioRaiseVolume     ), spawn "~/.xmonad/scripts/volume.sh up")
 
-	-- Switch to next workspace
+    -- Switch to next workspace
     , ((modm .|. shiftMask, xK_j     ), moveTo Next HiddenNonEmptyWS )
 
-	-- Switch to previous workspace
+    -- Switch to previous workspace
     , ((modm .|. shiftMask, xK_k     ), moveTo Prev HiddenNonEmptyWS )
 
-	-- Message for rotating a split (horizontal/vertical) in the BSP
+    -- Message for rotating a split (horizontal/vertical) in the BSP
     , ((modm              , xK_r     ), sendMessage Rotate )
 
-	-- Message for swapping the left child of a split with the right child of split
+    -- Message for swapping the left child of a split with the right child of split
     , ((modm              , xK_s     ), sendMessage Swap )
 
     -- Quit xmonad

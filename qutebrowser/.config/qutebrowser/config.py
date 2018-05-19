@@ -1,6 +1,6 @@
 c.backend = 'webengine'
 
-c.editor.command = ['alacritty', '-e', '/home/ejiek/.config/qutebrowser/vim', '{}']
+c.editor.command = ['alacritty', '-e', 'vim', '{}']
 c.editor.encoding = 'utf-8'
 
 c.downloads.location.directory = '~/Downvotes'

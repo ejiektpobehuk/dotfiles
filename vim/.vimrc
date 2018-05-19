@@ -69,3 +69,12 @@ hi SpellBad cterm=underline
 
 " fix gruvbox color
 set termguicolors
+
+" Rust racer [https://github.com/racer-rust/vim-racer]
+set hidden
+let g:racer_cmd = "/usr/bin/racer"
+
+" rusty tags [https://github.com/dan-t/rusty-tags]
+autocmd BufRead *.rs :setlocal tags=./rusty-tags.vi;/
+autocmd BufWritePost *.rs :silent! exec "!rusty-tags vi --quiet --start-dir=" . expand('%:p:h') . "&" | redraw!
+autocmd BufRead *.rs :setlocal tags=./rusty-tags.vi;/,$RUST_SRC_PATH/rusty-tags.vi
