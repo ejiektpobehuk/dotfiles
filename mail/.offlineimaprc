@@ -64,3 +64,20 @@ nametrans = lambda folder: {'sent': '&BB4EQgQ,BEAEMAQyBDsENQQ9BD0ESwQ1-',
                             'spam': '&BCEEPwQwBDw-',
                             'trash': '&BBoEPgRABDcEOAQ9BDA-',
                             'inbox': 'INBOX'}.get(folder, folder)
+[Account cockli]
+
+localrepository = cockli-local
+remoterepository = cockli-remote
+
+[Repository cockli-remote]
+auth_mechanisms = LOGIN
+type = IMAP
+remoteuser = ejiek@cock.li
+remotepasseval = mailpasswd("cockli")
+remotehost = mail.cock.li
+remoteport = 993
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+
+[Repository cockli-local]
+type = Maildir
+localfolders = ~/.mail/cockli
