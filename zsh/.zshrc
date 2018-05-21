@@ -71,3 +71,6 @@ zle -N down-line-or-beginning-search
 
 bindkey -- "^P" up-line-or-beginning-search
 bindkey -- "^N" down-line-or-beginning-search
+
+# Autosuggestions
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
