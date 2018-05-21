@@ -60,7 +60,7 @@ compinit
 promptinit
 
 # Theme
-prompt adam2
+prompt spaceship
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
