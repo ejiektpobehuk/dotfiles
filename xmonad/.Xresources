@@ -1,4 +1,5 @@
-Xcursor.theme: Breeze_Snow
+Xcursor.theme: breeze-snow-cursor
+Xcursor.size: 32
 
 urxvt*font: xft:Droid Sans Mono for Powerline:size=9:antialias=true:hinting=true
 !URxvt*font:  xft:UbuntuMono:pixelsize=5
