@@ -1,0 +1,2 @@
+macro index,pager i1 '<sync-mailbox><enter-command>source /home/ejiek/.config/mutt/accounts/spbpu.muttrc<enter><change-folder>!<enter>;<check-stats>'
+source /home/ejiek/.config/mutt/accounts/spbpu.muttrc
