@@ -42,4 +42,5 @@ picom&
 xsetroot -cursor_name left_ptr
 eval $(ssh-agent -s)
 export RUST_SRC_PATH=$(rustc --print sysroot)/lib/rustlib/src/rust/src/
+redshift -l 59.8944444:30.2641667&
 exec xmonad
