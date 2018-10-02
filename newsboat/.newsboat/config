@@ -1,4 +1,8 @@
 external-url-viewer "urlview"
+ttrss-url "https://news.ejiek.com"
+ttrss-login "ejiek"
+ttrss-passwordeval "pass news.ejiek.com"
+urls-source "ttrss"
 
 # vim-like
 bind-key j down
