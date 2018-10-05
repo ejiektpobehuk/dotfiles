@@ -10,6 +10,12 @@ set certificate_file = ~/.config/mutt/accounts/spbpu/certificates
 source "~/.config/mutt/credentials/getmuttpass spbpu |"
 
 alias me Vladislav Petrov <vladislav.petrov@spbpu.com>
+alias az Arseny Zorin <arseny.zorin@spbpu.com>
+alias mv Marina Bolsunovskaia <marina.bolsunovskaia@spbpu.com>
+alias av Aleksandr Leksashov <aleksandr.leksashov@spbpu.com>
+alias galina Galina Shupegina <galina.shupegina@spbpu.com>
+alias evgenia Evgenia Zhandetskaya <evgeniya.zhandetskaya@spbpu.com>
+alias all All <all@spbpu.com>
 
 set mbox_type = Maildir
 set ssl_starttls = no
