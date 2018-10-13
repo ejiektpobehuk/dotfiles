@@ -10,7 +10,7 @@ c.aliases = {
     'arch': 'open https://archlinux.org',
     'ff': 'spawn firefox {url}',
     'mail': 'open https://e.mail.ru/messages/inbox',
-    'mpv': 'spawn mpv {url}',
+    'mpv': 'spawn mpv --ytdl-format=bestvideo[height<=?720]+bestaudio/best {url}',
     'proxy-gateway': 'set content.proxy socks://localhost:8118/',
     'proxy-off': 'set content.proxy system',
     'q': 'quit',
