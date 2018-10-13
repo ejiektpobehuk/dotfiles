@@ -21,6 +21,8 @@ c.aliases = {
     'yt': 'open https://youtube.com/feed/subscriptions'
 }
 
+config.bind("<Alt-m>", 'spawn mpv --ytdl-format=bestvideo[height<=?720]+bestaudio/best {url}')
+
 c.url.searchengines = {
     'DEFAULT': 'https://duckduckgo.com/?q={}',
     'airbnb': 'https://www.airbnb.com/s/{}/',
@@ -73,6 +75,7 @@ c.url.searchengines = {
     'yamaps': 'https://yandex.ru/maps/2/saint-petersburg/search/{}/',
     'yt': 'https://youtube.com/results?search_query={}'
 }
+
 
 # Gruvbox light colours
 c.colors.completion.fg = '#3c3836'
