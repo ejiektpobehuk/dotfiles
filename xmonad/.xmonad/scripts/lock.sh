@@ -8,5 +8,5 @@
 # TODO: bring information back to the lockscreen
 
 killall picom
-i3lock -i ~/Pictures/lock -n
+i3lock -i ~/pictures/lock -n
 nohup picom&
