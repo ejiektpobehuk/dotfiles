@@ -21,3 +21,5 @@ bind-key N prev-unread
 bind-key D pb-download
 bind-key U show-urls
 bind-key x pb-delete
+
+macro m set browser "mpv '--ytdl-format=bestvideo[height<=?720]+bestaudio/best' %u"; open-in-browser ; set browser "elinks %u"
