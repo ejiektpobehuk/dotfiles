@@ -98,6 +98,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- call rofi-pass
     , ((modm .|. altMask,   xK_p     ), spawn "rofi-pass")
 
+    -- call rofi-wifi
+    , ((modm .|. altMask,   xK_m     ), spawn "rofi-wifi-menu")
+
     -- close focused window
     , ((modm .|. shiftMask, xK_c     ), kill)
 
