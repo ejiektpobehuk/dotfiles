@@ -1,4 +1,4 @@
-external-url-viewer "urlview"
+external-url-viewer "urlscan"
 ttrss-url "https://news.ejiek.com"
 ttrss-login "ejiek"
 ttrss-passwordeval "pass news.ejiek.com"
