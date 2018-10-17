@@ -87,6 +87,7 @@ __wttr() {
 # Aliases for taskwarrior
 alias in='task add +in'
 alias tick='__tickle'
+alias timew='ssh siemens-workstation timew'
 alias think='__tickle +1d'
 __tickle () {
     deadline=$1
