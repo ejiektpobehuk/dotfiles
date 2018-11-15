@@ -13,6 +13,7 @@ setopt hist_ignore_space
 # Aliases
 alias wttr="curl wttr.in"
 alias maps='telnet mapscii.me'
+alias mutt='neomutt'
 alias la="ls -lA --color"
 alias tmux="tmux -2"
 alias suspendless="systemd-inhibit --what=handle-lid-switch sleep"
@@ -74,3 +75,18 @@ bindkey -- "^N" down-line-or-beginning-search
 
 # Autosuggestions
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# zsh-lovers
+# Fuzzy matching of completions for when you mistype them:
+zstyle ':completion:*' completer _complete _match _approximate
+zstyle ':completion:*:match:*' original only
+zstyle ':completion:*:approximate:*' max-errors 1 numeric
+# Ignore completion functions for commands you don’t have:
+zstyle ':completion:*:functions' ignored-patterns '_*'
+# Completing process IDs with menu selection:
+zstyle ':completion:*:*:kill:*' menu yes select
+zstyle ':completion:*:kill:*'   force-list always
+# If you end up using a directory as argument, this will remove the trailing slash (usefull in ln)
+zstyle ':completion:*' squeeze-slashes true
+# cd will never select the parent directory (e.g.: cd ../<TAB>):
+zstyle ':completion:*:cd:*' ignore-parents parent pwd
