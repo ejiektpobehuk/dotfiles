@@ -34,8 +34,7 @@ fi
 
 
 feh --bg-fill ~/pictures/wallpaper
-setxkbmap -layout "us,ru" option "grp:escape,grp_led:caps"
-xmodmap ~/.Xmodmap
+setxkbmap -layout "us,ru" option "grp:caps_toggle,grp_led:caps"
 kbdd&
 unclutter&
 picom&

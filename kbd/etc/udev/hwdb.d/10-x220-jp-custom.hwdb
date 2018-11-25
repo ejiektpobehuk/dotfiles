@@ -1,0 +1,8 @@
+evdev:input:b0011v0001p0001*
+  KEYBOARD_KEY_01=capslock  # at Esc
+  KEYBOARD_KEY_3a=esc  # at Caps
+  KEYBOARD_KEY_7b=leftmeta  # next to the left of space
+  KEYBOARD_KEY_e05b=leftalt  # 3rd button to the left of space KEYBOARD_KEY_38=leftctrl  # 2nd button to the left of space
+  KEYBOARD_KEY_70=rightalt  # 2nd button to the right of space
+  KEYBOARD_KEY_79=backspace  # next to the right of space
+
