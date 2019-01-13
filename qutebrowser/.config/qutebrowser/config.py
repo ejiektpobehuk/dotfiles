@@ -29,6 +29,7 @@ c.url.searchengines = {
     'aw': 'https://wiki.archlinux.org/?search={}',
 	'crates': 'https://crates.io/search?q={}',
     'do': 'https://www.digitalocean.com/community/search?q={}',
+    'dh': 'https://hub.docker.com/search?q={}&type=image',
     'ebay': 'https://www.ebay.com/sch/items/?_nkw={}',
     'g': 'https://www.google.com/search?hl=en&q={}',
     'github': 'https://github.com/search?utf8=/%E2%9C%93&q={}&type=',
