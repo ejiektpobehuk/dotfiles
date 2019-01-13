@@ -266,6 +266,8 @@ myLayout = smartSpacingWithEdge 10 $ smartBorders $ emptyBSP
 myManageHook = composeAll
     [ className =? "MPlayer"        --> doFloat
     , className =? "Gimp"           --> doFloat
+    , className =? "TelegramDesktop"
+	   <&&> title =? "Media viewer" --> doFloat
     , resource  =? "desktop_window" --> doIgnore
     , resource  =? "kdesktop"       --> doIgnore ] 
 
