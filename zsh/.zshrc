@@ -43,6 +43,7 @@ __tickle () {
     shift
     in +tickle wait:$deadline $@
 }
+alias wget-dir='wget -r -np -R "index.html*"'
 
 #Suffix aliases
 alias -s tex=vim
