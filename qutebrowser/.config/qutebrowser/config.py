@@ -15,6 +15,7 @@ c.aliases = {
     'proxy-off': 'set content.proxy system',
     'q': 'quit',
     'stig-add': 'spawn stig add {url}',
+    'tor': 'spawn tor-browser {url}',
     'w': 'session-save',
     'wq': 'quit --save',
     'yt': 'open https://youtube.com/feed/subscriptions'
