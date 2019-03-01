@@ -13,6 +13,8 @@ setopt hist_ignore_space
 # Aliases
 alias wttr="curl wttr.in"
 alias maps='telnet mapscii.me'
+alias dit='__dit'
+alias mit='__mit'
 alias mutt='neomutt'
 alias la="ls -lA --color"
 alias tmux="tmux -2"
@@ -25,6 +27,25 @@ __trans() {
 }
 __def() {
 	sdcv --color --data-dir /usr/share/stardict/dic/def/ $* | less -R
+}
+
+__dit() {
+    if [ -d "$1" ] ; then
+	  echo "\e[4;32mRepository:\x1B[0m $1"
+	  git -C $*
+	else
+	  echo "you should specify a directory with git repo as first argument"
+	  exit 1
+	fi
+}
+
+__mit() {
+    for repo in `ls`
+	do
+	  echo "\e[4;32mRepository:\x1B[0m $repo"
+	  git -C $repo $*
+	  echo ''
+	done
 }
 
 # oui lookup
