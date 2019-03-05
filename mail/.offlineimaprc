@@ -36,3 +36,21 @@ nametrans = lambda folder: {'sent': '&BB4EQgQ,BEAEMAQyBDsENQQ9BD0ESwQ1-',
                             'spam': '&BCEEPwQwBDw-',
                             'trash': '&BBoEPgRABDcEOAQ9BDA-',
                             'inbox': 'INBOX'}.get(folder, folder)
+
+
+[Account mailru]
+localrepository = mailru-local
+remoterepository = mailru-remote
+
+[Repository mailru-remote]
+auth_mechanisms = LOGIN
+type = IMAP
+remoteuser = ejiek@mail.ru
+remotepasseval = mailpasswd("mailru")
+remotehost = imap.mail.ru
+remoteport = 993
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+
+[Repository mailru-local]
+type = Maildir
+localfolders = ~/.mail/mailru

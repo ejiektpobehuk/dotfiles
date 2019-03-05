@@ -1,0 +1,31 @@
+# vim: filetype=neomuttrc
+# muttrc file for account mailru
+set realname = "Vladislav Petrov"
+set from = "ejiek@mail.ru"
+set sendmail = "/usr/bin/msmtp -a mailru"
+set folder = "~/.mail/mailru"
+set header_cache = ~/.config/mutt/accounts/mailru/cache/headers
+set message_cachedir = ~/.config/mutt/accounts/mailru/cache/bodies
+set certificate_file = ~/.config/mutt/accounts/mailru/certificates
+source "~/.config/mutt/credentials/getmuttpass mailru |"
+
+alias me Vladislav Petrov <ejiek@mail.ru>
+
+set mbox_type = Maildir
+set ssl_starttls = yes
+set ssl_force_tls = yes
+
+bind index,pager gg noop
+bind index,pager g noop
+bind index gg first-entry
+unmailboxes *
+mailboxes =mailru =------------------- "=ricksubroll" "=sent" "=drafts" "=trash" "=spam" "=inbox"
+macro index,pager gi "<change-folder>=inbox<enter>" "Go to inbox."
+macro index,pager gs "<change-folder>=sent<enter>" "Go to sent."
+macro index,pager gd "<change-folder>=drafts<enter>" "Go to drafts."
+macro index,pager gt "<change-folder>=trash<enter>" "Go to trash."
+macro index,pager gS "<change-folder>=spam<enter>" "Go to spam."
+set spoolfile = "+inbox"
+set record = "+sent"
+set postponed = "+drafts"
+set trash = "+trash"
