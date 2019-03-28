@@ -43,7 +43,7 @@ c.url.searchengines = {
     'market': 'https://market.yandex.ru/search?cvredirect=2&text={}&local-offers-first=1',
     'pac' : 'https://www.archlinux.org/packages/?q={}',
     'pacd' : 'https://packages.debian.org/search?suite=default&section=all&arch=any&searchon=names&keywords={}',
-    'pacf' : 'https://apps.fedoraproject.org/packages/s/{}'
+    'pacf' : 'https://apps.fedoraproject.org/packages/s/{}',
     'pacu' : 'https://packages.ubuntu.com/search?keywords={}&searchon=sourcenames',
     'rcgo': 'https://rc-go.ru/search/?s={}',
     'rstd': 'https://doc.rust-lang.org/std/?search={}',
