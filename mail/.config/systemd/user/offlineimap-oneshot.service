@@ -1,0 +1,10 @@
+[Unit]
+Description=Offline imap downloader
+
+[Service]
+Type=oneshot
+ExecStart=/home/ejiek/.config/mutt/etc/mailsync.sh
+TimeoutStopSec=12
+
+[Install]
+WantedBy=mail.target

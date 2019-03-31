@@ -1,0 +1,8 @@
+[Unit]
+Description=Background sync up for offlineimap
+
+[Timer]
+OnUnitActiveSec=1min 
+
+[Install]
+WantedBy=mail.target
