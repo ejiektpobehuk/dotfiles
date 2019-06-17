@@ -14,10 +14,12 @@ setopt hist_ignore_space
 alias wttr="curl wttr.in"
 alias maps='telnet mapscii.me'
 alias dit='__dit'
+alias doproxy='__doproxy'
 alias mit='__mit'
 alias mutt='neomutt'
 alias la="ls -lA --color"
 alias tmux="tmux -2"
+alias ssproxy='ssh -D 8118 -C -N'
 alias suspendless="systemd-inhibit --what=handle-lid-switch sleep"
 alias add-deleted="git status | grep 'deleted' | awk '{ print $2 }' | xargs git add"
 alias trans='__trans'
@@ -39,6 +41,11 @@ __dit() {
 	fi
 }
 
+__doproxy() {
+	doctl compute droplet create ssh-proxy --image ubuntu-18-04-x64 --size 1gb --region fra1 --ssh-keys 24825472 && ssproxy -oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null -i ~/.ssh/do root@`doctl compute droplet list | grep ssh-proxy | awk '{ print $3 }'`
+	doctl compute droplet delete -f ssh-proxy
+}
+
 __mit() {
     for repo in `ls`
 	do
@@ -57,7 +64,6 @@ __oui() {
 # Aliases for taskwarrior
 alias in='task add +in'
 alias tick='__tickle'
-alias ssproxy='ssh -D 8118 -C -N'
 alias think='__tickle +1d'
 __tickle () {
     deadline=$1
