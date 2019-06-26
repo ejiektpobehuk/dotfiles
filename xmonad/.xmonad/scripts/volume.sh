@@ -9,7 +9,7 @@ function send_notification {
     non_active=$(seq -s "─" $(( (100 - $volume ) / 4 )) | sed 's/[0-9]//g')
 	bar="$active<span color='#2020f0'>|</span><span color='#a0a0a0'>$non_active</span>"
     # Send the notification
-    dunstify -i audio-volume-high-symbolic -r 2593 -u low "    $bar"
+    dunstify -i audio-volume-high-symbolic -r 2593 -u critical " " "    $bar"
 }
 
 case $1 in
