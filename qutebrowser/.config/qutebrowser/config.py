@@ -3,7 +3,7 @@ c.backend = 'webengine'
 c.editor.command = ['alacritty', '-e', 'vim', '{}']
 c.editor.encoding = 'utf-8'
 
-c.downloads.location.directory = '~/Downvotes'
+c.downloads.location.directory = '~/downvotes'
 c.downloads.location.prompt = False
 
 c.aliases = {
@@ -34,6 +34,7 @@ c.url.searchengines = {
     'dh': 'https://hub.docker.com/search?q={}&type=image',
     'ebay': 'https://www.ebay.com/sch/items/?_nkw={}',
     'g': 'https://www.google.com/search?hl=en&q={}',
+    'gitlab': 'https://gitlab.com/search?search={}',
     'github': 'https://github.com/search?utf8=/%E2%9C%93&q={}&type=',
     'gmaps': 'https://www.google.ru/maps/search/{}',
     'gw': 'https://wiki.gentoo.org/?search={}',
