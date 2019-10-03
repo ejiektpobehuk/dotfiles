@@ -1,0 +1,72 @@
+IMAPStore mailru-remote
+Host imap.mail.ru
+Port  993
+User ejiek@mail.ru
+PassCmd "pass mutt-wizard-mailru"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+MaildirStore mailru-local
+Subfolders Verbatim
+Path ~/.local/share/mail/mailru/
+Inbox ~/.local/share/mail/mailru/INBOX
+Flatten .
+
+Channel mailru
+Expunge Both
+Master :mailru-remote:
+Slave :mailru-local:
+Patterns * !"[Gmail]/All Mail" !"Корзина" !"Черновики" !"Отправленные" !"Спам"
+Create Both
+SyncState *
+MaxMessages 0
+# End profile
+
+IMAPStore spbpu-remote
+Host imap.mail.ru
+Port  993
+User vladislav.petrov@spbpu.com
+PassCmd "pass mutt-wizard-spbpu"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+MaildirStore spbpu-local
+Subfolders Verbatim
+Path ~/.local/share/mail/spbpu/
+Inbox ~/.local/share/mail/spbpu/INBOX
+Flatten .
+
+Channel spbpu
+Expunge Both
+Master :spbpu-remote:
+Slave :spbpu-local:
+Patterns * !"[Gmail]/All Mail" !"Корзина" !"Черновики" !"Отправленные" !"Спам"
+Create Both
+SyncState *
+MaxMessages 0
+# End profile
+
+IMAPStore cockli-remote
+Host mail.cock.li
+Port  993
+User ejiek@cock.li
+PassCmd "pass mutt-wizard-cockli"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+MaildirStore cockli-local
+Subfolders Verbatim
+Path ~/.local/share/mail/cockli/
+Inbox ~/.local/share/mail/cockli/INBOX
+Flatten .
+
+Channel cockli
+Expunge Both
+Master :cockli-remote:
+Slave :cockli-local:
+Patterns * !"[Gmail]/All Mail"
+Create Both
+SyncState *
+MaxMessages 0
+# End profile
+
