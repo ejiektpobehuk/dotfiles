@@ -44,6 +44,7 @@ c.url.searchengines = {
     'imdb': 'http://www.imdb.com/find?ref_=nv_sr_fn&q={}&s=all',
     'maps': 'https://openstreetmap.org/search?query={}',
     'market': 'https://market.yandex.ru/search?cvredirect=2&text={}&local-offers-first=1',
+    'netflix': 'https://www.netflix.com/search?q={}',
     'pac' : 'https://www.archlinux.org/packages/?q={}',
     'pacd' : 'https://packages.debian.org/search?suite=default&section=all&arch=any&searchon=names&keywords={}',
     'pacf' : 'https://apps.fedoraproject.org/packages/s/{}',
