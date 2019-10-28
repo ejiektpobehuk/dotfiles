@@ -23,11 +23,13 @@ c.aliases = {
 
 c.url.searchengines = {
     'DEFAULT': 'https://duckduckgo.com/?q={}',
+    'airbnb': 'https://www.airbnb.com/s/{}/',
     'ali': 'https://ru.aliexpress.com/wholesale?SearchText={}',
     'amazon': 'https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords={}',
     'aur': 'https://aur.archlinux.org/packages/?O=0&K={}',
     'avito': 'https://www.avito.ru/sankt-peterburg?q={}',
     'aw': 'https://wiki.archlinux.org/?search={}',
+    'booking': 'https://www.booking.com/searchresults.ru.html?&ss={}',
     'crates': 'https://crates.io/search?q={}',
     'do': 'https://www.digitalocean.com/community/search?q={}',
     'docsrs': 'https://docs.rs/releases/search?query={}',
