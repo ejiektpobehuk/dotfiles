@@ -33,7 +33,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 
-feh --bg-fill ~/pictures/wallpaper
+~/.xmonad/scripts/random_wp.sh
 setxkbmap -layout "us,ru" option "grp:caps_toggle,grp_led:caps"
 kbdd&
 unclutter&
