@@ -18,6 +18,7 @@ port 465
 from vladislav.petrov@spbpu.com
 user vladislav.petrov@spbpu.com
 passwordeval "pass mutt-wizard-spbpu"
+tls_starttls off
 
 
 account cockli

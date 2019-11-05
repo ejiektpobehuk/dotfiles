@@ -1,0 +1,20 @@
+[database]
+path=/home/ejiek/.local/share/mail
+
+[user]
+name=Vladislav Petrov
+primary_email=ejiek@mail.ru
+other_email=vladislav.petrov@spbpu.com;ejiek@cock.li;
+
+[new]
+tags=unread;inbox;
+ignore=
+
+[search]
+exclude_tags=deleted;spam;
+
+[maildir]
+synchronize_flags=true
+
+[crypto]
+gpg_path=gpg
