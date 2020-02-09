@@ -17,6 +17,13 @@ alias dit='__dit'
 alias doproxy='__doproxy'
 alias mit='__mit'
 alias mutt='neomutt'
+alias k='kubectl'
+alias kg='kubectl get'
+alias kgd='kubectl get deployments'
+alias kgp='kubectl get pods'
+alias kgs='kubectl get svc'
+alias kcn='kubectl config set-context --current --namespace'
+alias kuc='kubectl config use-context'
 alias la="ls -lA --color"
 alias tmux="tmux -2"
 alias ssproxy='ssh -D 8118 -C -N'
@@ -118,3 +125,5 @@ zstyle ':completion:*:kill:*'   force-list always
 zstyle ':completion:*' squeeze-slashes true
 # cd will never select the parent directory (e.g.: cd ../<TAB>):
 zstyle ':completion:*:cd:*' ignore-parents parent pwd
+
+SPACESHIP_KUBECONTEXT_NAMESPACE_SHOW=true
