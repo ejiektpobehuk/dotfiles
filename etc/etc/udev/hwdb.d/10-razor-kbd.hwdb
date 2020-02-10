@@ -1,0 +1,4 @@
+evdev:input:b0003v1532p0202*
+  KEYBOARD_KEY_70029=capslock  # at Esc
+  KEYBOARD_KEY_70039=esc  # at Caps
+
