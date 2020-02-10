@@ -47,6 +47,7 @@ c.url.searchengines = {
     'maps': 'https://openstreetmap.org/search?query={}',
     'market': 'https://market.yandex.ru/search?cvredirect=2&text={}&local-offers-first=1',
     'netflix': 'https://www.netflix.com/search?q={}',
+    'obacklog': 'https://gitlab.ocado.tech/osp-cfc-platform/backlog/issues/{}',
     'pac' : 'https://www.archlinux.org/packages/?q={}',
     'pacd' : 'https://packages.debian.org/search?suite=default&section=all&arch=any&searchon=names&keywords={}',
     'pacf' : 'https://apps.fedoraproject.org/packages/s/{}',
