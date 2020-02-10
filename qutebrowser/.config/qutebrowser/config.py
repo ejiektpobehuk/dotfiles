@@ -56,7 +56,7 @@ c.url.searchengines = {
     'rstd': 'https://doc.rust-lang.org/std/?search={}',
 	'reddit': 'https://reddit.com/search?q={}',
     'tpb': 'https://thepiratebay.org/search/{}',
-	'unixporn': 'https://www.reddit.com/r/unixporn/search?q={}&restrict_sr=on',
+    'unixporn': 'https://www.reddit.com/r/unixporn/search?q={}&restrict_sr=on',
     'w': 'https://en.wikipedia.org/?search={}',
     'ya': 'https://yandex.ru/search/?lr=2&text={}',
     'yt': 'https://youtube.com/results?search_query={}'
