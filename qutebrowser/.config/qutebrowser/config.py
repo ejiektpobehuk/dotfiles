@@ -31,6 +31,7 @@ c.url.searchengines = {
     'aw': 'https://wiki.archlinux.org/?search={}',
     'booking': 'https://www.booking.com/searchresults.ru.html?&ss={}',
     'crates': 'https://crates.io/search?q={}',
+    'd': 'https://duckduckgo.com/?q={}',
     'do': 'https://www.digitalocean.com/community/search?q={}',
     'docsrs': 'https://docs.rs/releases/search?query={}',
     'dh': 'https://hub.docker.com/search?q={}&type=image',
@@ -47,11 +48,13 @@ c.url.searchengines = {
     'maps': 'https://openstreetmap.org/search?query={}',
     'market': 'https://market.yandex.ru/search?cvredirect=2&text={}&local-offers-first=1',
     'netflix': 'https://www.netflix.com/search?q={}',
-    'obacklog': 'https://gitlab.ocado.tech/osp-cfc-platform/backlog/issues/{}',
+    'ob': 'https://gitlab.ocado.tech/osp-cfc-platform/backlog/issues/{}',
     'pac' : 'https://www.archlinux.org/packages/?q={}',
+    'paca' : 'https://www.archlinuxarm.org/packages/?q={}',
     'pacd' : 'https://packages.debian.org/search?suite=default&section=all&arch=any&searchon=names&keywords={}',
     'pacf' : 'https://apps.fedoraproject.org/packages/s/{}',
     'pacu' : 'https://packages.ubuntu.com/search?keywords={}&searchon=sourcenames',
+    'protondb': 'https://www.protondb.com/search?q={}',
     'rcgo': 'https://rc-go.ru/search/?s={}',
     'rstd': 'https://doc.rust-lang.org/std/?search={}',
 	'reddit': 'https://reddit.com/search?q={}',
@@ -59,6 +62,7 @@ c.url.searchengines = {
     'unixporn': 'https://www.reddit.com/r/unixporn/search?q={}&restrict_sr=on',
     'w': 'https://en.wikipedia.org/?search={}',
     'ya': 'https://yandex.ru/search/?lr=2&text={}',
+    'yamaps': 'https://yandex.ru/maps/2/saint-petersburg/search/{}/',
     'yt': 'https://youtube.com/results?search_query={}'
 }
 
