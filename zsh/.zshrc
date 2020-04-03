@@ -68,6 +68,15 @@ __oui() {
 	grep $* -i /usr/share/nmap/nmap-mac-prefixes
 }
 
+# Show all resources in a namespace
+alias k-show-ns='__k-show-ns'
+ __k-show-ns() {
+  for i in $(kubectl api-resources --verbs=list --namespaced -o name | grep -v "events.events.k8s.io" | grep -v "events" | sort | uniq); do
+    echo "Resource:" $i
+    kubectl -n ${1} get --ignore-not-found ${i}
+  done
+}
+
 # Aliases for taskwarrior
 alias in='task add +in'
 alias tick='__tickle'
@@ -78,6 +87,7 @@ __tickle () {
     in +tickle wait:$deadline $@
 }
 alias wget-dir='wget -r -np -R "index.html*"'
+alias sdfailed='systemctl list-units --state=failed'
 
 #Suffix aliases
 alias -s tex=vim
@@ -85,18 +95,13 @@ alias -s html=qutebrowser
 alias -s png=sxiv
 alias -s jpg=sxiv
 
-export VISUAL="vim"
-export EDITOR="vim"
-export BROWSER="qutebrowser"
-export TERMINAL="alacritty"
-
 #Arch wiki
 autoload -Uz compinit promptinit
 compinit
 promptinit
 
 # Theme
-prompt spaceship
+eval "$(starship init zsh)"
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
@@ -126,4 +131,4 @@ zstyle ':completion:*' squeeze-slashes true
 # cd will never select the parent directory (e.g.: cd ../<TAB>):
 zstyle ':completion:*:cd:*' ignore-parents parent pwd
 
-SPACESHIP_KUBECONTEXT_NAMESPACE_SHOW=true
+source /home/ejiek/.config/broot/launcher/bash/br
