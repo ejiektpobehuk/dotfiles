@@ -49,6 +49,7 @@ c.url.searchengines = {
     'market': 'https://market.yandex.ru/search?cvredirect=2&text={}&local-offers-first=1',
     'netflix': 'https://www.netflix.com/search?q={}',
     'ob': 'https://gitlab.ocado.tech/osp-cfc-platform/backlog/issues/{}',
+    'obs': 'https://gitlab.ocado.tech/osp-cfc-platform/backlog/issues?scope=all&utf8=%E2%9C%93&state=all&search={}',
     'pac' : 'https://www.archlinux.org/packages/?q={}',
     'paca' : 'https://www.archlinuxarm.org/packages/?q={}',
     'pacd' : 'https://packages.debian.org/search?suite=default&section=all&arch=any&searchon=names&keywords={}',
