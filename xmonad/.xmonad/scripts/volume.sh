@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env sh
 function is_mute {
     pamixer --get-mute | grep true > /dev/null
 }
