@@ -29,6 +29,7 @@ alias tmux="tmux -2"
 alias ssproxy='ssh -D 8118 -C -N'
 alias suspendless="systemd-inhibit --what=handle-lid-switch sleep"
 alias add-deleted="git status | grep 'deleted' | awk '{ print $2 }' | xargs git add"
+alias jqp="jq -C | less -R"
 alias trans='__trans'
 alias def='__def'
 __trans() {
