@@ -7,6 +7,6 @@
 
 # TODO: bring information back to the lockscreen
 
-killall compton
+killall picom
 i3lock -i ~/Pictures/lock -n
-nohup compton&
+nohup picom&
