@@ -1,2 +1,7 @@
 [Default Applications]
 application/pdf=org.pwmt.zathura.desktop;
+application/xhtml+xml=org.qutebrowser.qutebrowser.desktop;firefox.desktop;
+ext/html=org.qutebrowser.qutebrowser.desktop;elinks.desktop;firefox.desktop;
+text/xml=org.qutebrowser.qutebrowser.desktop;firefox.desktop;
+x-scheme-handler/http=org.qutebrowser.qutebrowser.desktop;firefox.desktop;
+x-scheme-handler/https=org.qutebrowser.qutebrowser.desktop;firefox.desktop;
