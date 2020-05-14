@@ -161,6 +161,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,     xF86XK_AudioMute            ), spawn "~/.xmonad/scripts/volume.sh mute")
     , ((0,     xF86XK_AudioLowerVolume     ), spawn "~/.xmonad/scripts/volume.sh down")
     , ((0,     xF86XK_AudioRaiseVolume     ), spawn "~/.xmonad/scripts/volume.sh up")
+    , ((0,     xF86XK_AudioMicMute         ), spawn "~/.xmonad/scripts/toggle-mic.sh")
 
     -- Switch to next workspace
     , ((modm .|. shiftMask, xK_j     ), moveTo Next HiddenNonEmptyWS )
