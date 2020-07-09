@@ -132,4 +132,4 @@ zstyle ':completion:*' squeeze-slashes true
 # cd will never select the parent directory (e.g.: cd ../<TAB>):
 zstyle ':completion:*:cd:*' ignore-parents parent pwd
 
-source /home/ejiek/.config/broot/launcher/bash/br
+source "$HOME/.config/broot/launcher/bash/br"
