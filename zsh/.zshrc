@@ -133,3 +133,5 @@ zstyle ':completion:*' squeeze-slashes true
 zstyle ':completion:*:cd:*' ignore-parents parent pwd
 
 source "$HOME/.config/broot/launcher/bash/br"
+
+eval "$(direnv hook zsh)"
