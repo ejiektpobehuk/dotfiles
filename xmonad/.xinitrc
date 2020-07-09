@@ -38,7 +38,7 @@ setxkbmap -layout "us,ru" option "grp:escape,grp_led:caps"
 xmodmap ~/.Xmodmap
 kbdd&
 unclutter&
-compton&
+picom&
 xsetroot -cursor_name left_ptr
 eval $(ssh-agent -s)
 export RUST_SRC_PATH=$(rustc --print sysroot)/lib/rustlib/src/rust/src/
