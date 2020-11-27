@@ -25,6 +25,8 @@ alias kgs='kubectl get svc'
 alias kcn='kubectl config set-context --current --namespace'
 alias kuc='kubectl config use-context'
 alias la="ls -lA --color"
+alias task="dstask"
+alias t="dstask"
 alias tmux="tmux -2"
 alias ssproxy='ssh -D 8118 -C -N'
 alias suspendless="systemd-inhibit --what=handle-lid-switch sleep"
@@ -133,5 +135,7 @@ zstyle ':completion:*' squeeze-slashes true
 zstyle ':completion:*:cd:*' ignore-parents parent pwd
 
 source "$HOME/.config/broot/launcher/bash/br"
+source /usr/share/zsh/site-functions/_dstask
+
 
 eval "$(direnv hook zsh)"
