@@ -1,7 +1,9 @@
 #!/usr/bin/env sh
 
-# Sends notification twice a second to imitate clock ticking
+# Animated clock in notification
+# Sends notification 10 time a second to imitate persistent clock ticking
+# Does it for 5 seconds
 
-for COUNT in {0..9}
-do dunstify -I /usr/share/icons/Arc/apps/32/preferences-system-time.png " " "$(date)" -r 2681 -u critical
-sleep 0.5; done
+for COUNT in {0..49}
+do notify-send --category=animated_clock --hint=string:x-dunst-stack-tag:clock --icon=/usr/share/icons/Arc/apps/32/preferences-system-time.png " " "$(date)"
+sleep 0.1; done
