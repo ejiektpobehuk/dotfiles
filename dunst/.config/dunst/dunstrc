@@ -345,4 +345,11 @@
     foreground = "#ebdbb2"
     frame_color = "#b8bb26"
 	timeout = 10
+[healthbar]
+    appname = healthbar
+    background = "#00000000"
+    frame_color = "#00000000"
+[clock]
+    category = animated_clock
+    timeout = 1
 # vim: ft=cfg
