@@ -43,6 +43,7 @@ c.url.searchengines = {
     'github': 'https://github.com/search?utf8=/%E2%9C%93&q={}&type=',
     'gmaps': 'https://www.google.ru/maps/search/{}',
     'gw': 'https://wiki.gentoo.org/?search={}',
+    'hoogle': 'https://hoogle.haskell.org/?hoogle={}',
     'ikea': 'https://www.ikea.com/ru/ru/search/?query={}',
     'imdb': 'http://www.imdb.com/find?ref_=nv_sr_fn&q={}&s=all',
     'maps': 'https://openstreetmap.org/search?query={}',
@@ -95,6 +96,8 @@ c.colors.statusbar.url.success.https.fg = '#98971a'
 c.colors.statusbar.url.error.fg = '#d65d0e'
 c.colors.statusbar.url.warn.fg = '#d79921'
 c.colors.statusbar.url.hover.fg = '#689d6a'
+
+c.content.notifications = False
 
 c.colors.tabs.odd.fg = '#3c3836'
 c.colors.tabs.odd.bg = '#7c6f64'
