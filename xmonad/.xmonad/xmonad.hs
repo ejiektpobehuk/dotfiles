@@ -158,6 +158,10 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- , ((modm              , xK_b     ), sendMessage ToggleStruts)
 
     -- Media keys
+    , ((0,     xF86XK_AudioPlay            ), spawn "playerctl play-pause")
+    , ((0,     xF86XK_AudioPrev            ), spawn "playerctl previous")
+    , ((0,     xF86XK_AudioNext            ), spawn "playerctl next")
+    , ((0,     xF86XK_AudioStop            ), spawn "playerctl stop")
     , ((0,     xF86XK_AudioMute            ), spawn "~/.xmonad/scripts/volume.sh mute")
     , ((0,     xF86XK_AudioLowerVolume     ), spawn "~/.xmonad/scripts/volume.sh down")
     , ((0,     xF86XK_AudioRaiseVolume     ), spawn "~/.xmonad/scripts/volume.sh up")
