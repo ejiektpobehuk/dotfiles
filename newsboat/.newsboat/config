@@ -1,8 +1,8 @@
 external-url-viewer "urlscan"
-ttrss-url "https://news.ejiek.com"
-ttrss-login "ejiek"
-ttrss-passwordeval "pass news.ejiek.com"
-urls-source "ttrss"
+
+auto-reload yes
+reload-threads 16
+reload-time 15
 
 # vim-like
 bind-key j down
