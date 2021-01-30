@@ -8,5 +8,17 @@
 # TODO: bring information back to the lockscreen
 
 killall picom
-i3lock -i ~/pictures/lock -n
+killall dunst
+i3lock \
+  -i ~/pictures/lock.ch.png \
+  -n \
+  --force-clock \
+  --timepos="705:412" \
+  --time-font="FiraSans Mono" \
+  --timesize=10 \
+  --timestr="%H:%M" \
+  --datestr="" \
+  --timecolor="076678ff" \
+  --pass-media-keys \
+  --pass-volume-keys
 nohup picom&
