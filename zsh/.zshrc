@@ -11,7 +11,7 @@ setopt hist_ignore_all_dups
 setopt hist_ignore_space
 
 # Aliases
-alias wttr="curl wttr.in"
+alias wttr="__wttr"
 alias maps='telnet mapscii.me'
 alias dit='__dit'
 alias doproxy='__doproxy'
@@ -78,6 +78,10 @@ alias k-show-ns='__k-show-ns'
     echo "Resource:" $i
     kubectl -n ${1} get --ignore-not-found ${i}
   done
+}
+
+__wttr() {
+  curl "wttr.in/$*"
 }
 
 # Aliases for taskwarrior
