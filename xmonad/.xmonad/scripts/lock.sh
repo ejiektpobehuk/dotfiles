@@ -19,6 +19,8 @@ i3lock \
   --image ~/Pictures/lock \
   --nofork \
   --screen=1 \
+  --pass-media-keys \
+  --pass-volume-keys \
   --force-clock \
   --greetertext="Welcome back, ejiek!" \
   --wrongtext="You have to try harder ^.~" \
