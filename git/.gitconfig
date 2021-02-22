@@ -11,3 +11,5 @@
 	path = ~/.config/git/ocado.conf
 [pull]
 	ff = only
+[init]
+	defaultBranch = main
