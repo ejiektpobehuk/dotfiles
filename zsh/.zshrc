@@ -52,7 +52,7 @@ __dit() {
 }
 
 __doproxy() {
-	doctl compute droplet create ssh-proxy --image ubuntu-18-04-x64 --size 1gb --region fra1 --ssh-keys 24825472 && ssproxy -oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null -i ~/.ssh/do root@`doctl compute droplet list | grep ssh-proxy | awk '{ print $3 }'`
+	doctl compute droplet create ssh-proxy --wait --image ubuntu-20-04-x64 --size 1gb --region fra1 --ssh-keys 23355311 && ssproxy -oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null -i ~/.ssh/do root@`doctl compute droplet list | grep ssh-proxy | awk '{ print $3 }'`
 	doctl compute droplet delete -f ssh-proxy
 }
 
