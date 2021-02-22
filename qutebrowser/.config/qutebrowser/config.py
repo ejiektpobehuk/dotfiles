@@ -48,6 +48,7 @@ c.url.searchengines = {
     'ikea': 'https://www.ikea.com/ru/ru/search/?query={}',
     'imdb': 'http://www.imdb.com/find?ref_=nv_sr_fn&q={}&s=all',
     'maps': 'https://openstreetmap.org/search?query={}',
+    'man': 'https://man.archlinux.org/man/{}',
     'market': 'https://market.yandex.ru/search?cvredirect=2&text={}&local-offers-first=1',
     'netflix': 'https://www.netflix.com/search?q={}',
     'ob': 'https://gitlab.ocado.tech/osp-cfc-platform/backlog/issues/{}',
