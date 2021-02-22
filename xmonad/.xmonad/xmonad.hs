@@ -88,6 +88,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     -- lock screen
     , ((modm .|. shiftMask, xK_l     ), spawn "~/.xmonad/scripts/lock.sh" )
+    -- lock and suspend
+    , ((modm .|. shiftMask, xK_s     ), spawn "~/.xmonad/scripts/sock.sh" )
 
     -- show time
     , ((modm .|. shiftMask, xK_t     ), spawn "~/.xmonad/scripts/time.sh")
