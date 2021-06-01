@@ -1,4 +1,6 @@
 c.backend = 'webengine'
+config.load_autoconfig(False)
+
 
 c.editor.command = ['alacritty', '-e', 'vim', '{}']
 c.editor.encoding = 'utf-8'
@@ -99,7 +101,7 @@ c.colors.statusbar.url.error.fg = '#d65d0e'
 c.colors.statusbar.url.warn.fg = '#d79921'
 c.colors.statusbar.url.hover.fg = '#689d6a'
 
-c.content.notifications = False
+c.content.notifications.enabled = False
 
 c.colors.tabs.odd.fg = '#3c3836'
 c.colors.tabs.odd.bg = '#7c6f64'
