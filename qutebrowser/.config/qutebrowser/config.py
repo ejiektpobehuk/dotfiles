@@ -51,6 +51,7 @@ c.url.searchengines = {
     'hoogle': 'https://hoogle.haskell.org/?hoogle={}',
     'ikea': 'https://www.ikea.com/ru/ru/search/?query={}',
     'imdb': 'http://www.imdb.com/find?ref_=nv_sr_fn&q={}&s=all',
+    'librs': 'https://lib.rs/search?q={}',
     'maps': 'https://openstreetmap.org/search?query={}',
     'man': 'https://man.archlinux.org/man/{}',
     'market': 'https://market.yandex.ru/search?cvredirect=2&text={}&local-offers-first=1',
@@ -66,6 +67,7 @@ c.url.searchengines = {
     'pacu': 'https://packages.ubuntu.com/search?keywords={}&searchon=sourcenames',
     'pochta': 'https://www.pochta.ru/tracking#{}',
     'pdb': 'https://www.protondb.com/search?q={}',
+    'pulumi': 'https://www.pulumi.com/docs/#stq={}&stp=1',
     'rcgo': 'https://rc-go.ru/search/?s={}',
     'rstd': 'https://doc.rust-lang.org/std/?search={}',
     'reddit': 'https://reddit.com/search?q={}',
@@ -76,7 +78,8 @@ c.url.searchengines = {
     'w': 'https://en.wikipedia.org/?search={}',
     'ya': 'https://yandex.ru/search/?lr=2&text={}',
     'yamaps': 'https://yandex.ru/maps/2/saint-petersburg/search/{}/',
-    'yt': 'https://youtube.com/results?search_query={}'
+    'yt': 'https://youtube.com/results?search_query={}',
+    'я': 'https://yandex.ru/search/?lr=2&text={}'
 }
 
 # Gruvbox light colours
