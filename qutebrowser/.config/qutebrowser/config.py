@@ -5,6 +5,8 @@ config.load_autoconfig(False)
 c.editor.command = ['alacritty', '-e', 'vim', '{}']
 c.editor.encoding = 'utf-8'
 
+config.load_autoconfig(False)
+
 c.downloads.location.directory = '~/downvotes'
 c.downloads.location.prompt = False
 
