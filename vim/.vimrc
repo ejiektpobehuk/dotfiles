@@ -17,6 +17,39 @@ set spelllang=en,ru
 " Bye vi
 set nocompatible
 
+"dein Scripts-----------------------------
+" Required:
+set runtimepath+=/Users/ejiek/.vim/bundles/repos/github.com/Shougo/dein.vim
+
+" Required:
+call dein#begin('/Users/ejiek/.vim/bundles')
+
+" Let dein manage dein
+" Required:
+call dein#add('/Users/ejiek/.vim/bundles/repos/github.com/Shougo/dein.vim')
+
+" Add or remove your plugins here like this:
+call dein#add('gruvbox-community/gruvbox')
+call dein#add('neoclide/coc.nvim', { 'merged': 0 })
+call dein#add("dhruvasagar/vim-table-mode")
+call dein#add("vim-airline/vim-airline")
+call dein#add("preservim/nerdtree")
+call dein#add("tpope/vim-fugitive")
+
+" Required:
+call dein#end()
+
+" Required:
+filetype plugin indent on
+syntax enable
+
+" If you want to install not installed plugins on startup.
+"if dein#check_install()
+"  call dein#install()
+"endif
+
+"End dein Scripts-------------------------
+
 " Fuzzy search (down into subfolders)
 set path+=**
 
