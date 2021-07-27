@@ -1,8 +1,9 @@
 c.backend = 'webengine'
 config.load_autoconfig(False)
 
+c.fonts.default_size = "14pt"
 
-c.editor.command = ['alacritty', '-e', 'vim', '{}']
+c.editor.command = ['/Applications/Alacritty.app/Contents/MacOS/Alacritty', '-e', 'vim', '{}']
 c.editor.encoding = 'utf-8'
 
 config.load_autoconfig(False)
