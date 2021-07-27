@@ -35,10 +35,10 @@ alias jqp="jq -C | less -R"
 alias trans='__trans'
 alias def='__def'
 __trans() {
-	sdcv --color --data-dir /usr/share/stardict/dic/trans/ $* | less -R
+	sdcv --color --data-dir /usr/local/share/stardict/dic/trans/ $* | less -R
 }
 __def() {
-	sdcv --color --data-dir /usr/share/stardict/dic/def/ $* | less -R
+	sdcv --color --data-dir /usr/local/share/stardict/dic/def/ $* | less -R
 }
 
 __dit() {
@@ -110,7 +110,7 @@ promptinit
 # Theme
 eval "$(starship init zsh)"
 
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # History search
 autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
@@ -121,7 +121,7 @@ bindkey -- "^P" up-line-or-beginning-search
 bindkey -- "^N" down-line-or-beginning-search
 
 # Autosuggestions
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # zsh-lovers
 # Fuzzy matching of completions for when you mistype them:
@@ -139,7 +139,5 @@ zstyle ':completion:*' squeeze-slashes true
 zstyle ':completion:*:cd:*' ignore-parents parent pwd
 
 source "$HOME/.config/broot/launcher/bash/br"
-source /usr/share/zsh/site-functions/_dstask
-
 
 eval "$(direnv hook zsh)"
