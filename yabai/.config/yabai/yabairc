@@ -1,0 +1,7 @@
+sudo yabai --load-sa
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+
+yabai -m config layout bsp
+
+yabai -m space --padding abs:15:15:15:15
+yabai -m space --gap abs:15
