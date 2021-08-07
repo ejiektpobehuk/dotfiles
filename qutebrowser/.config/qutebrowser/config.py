@@ -13,7 +13,7 @@ c.downloads.location.prompt = False
 
 c.aliases = {
     'arch': 'open https://archlinux.org',
-    'ff': 'spawn firefox {url}',
+    'ff': 'spawn /Applications/Firefox.app/Contents/MacOS/Firefox {url}',
     'mail': 'open https://e.mail.ru/messages/inbox',
     'mpv': 'spawn mpv {url}',
     'proxy-gateway': 'set content.proxy socks://localhost:8118/',
