@@ -11,10 +11,10 @@ cmd - j : yabai -m window --focus next
 cmd - l : yabai -m window --focus east
 
 # move window
-shift + cmd - h : yabai -m window --warp west
-shift + cmd - j: yabai -m window --warp next
-shift + cmd - k: yabai -m window --warp prev
-shift + cmd - l : yabai -m window --warp east
+shift + alt - h : yabai -m window --warp west
+shift + alt - j: yabai -m window --warp next
+shift + alt - k: yabai -m window --warp prev
+shift + alt - l : yabai -m window --warp east
 
 # increase window size
 cmd + alt - h : yabai -m window --resize left:-20:0
