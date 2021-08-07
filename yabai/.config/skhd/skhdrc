@@ -5,8 +5,10 @@ cmd - q : /Applications/qutebrowser.app/Contents/MacOS/qutebrowser
 cmd - space : yabai -m window --toggle zoom-fullscreen
 
 # focus previous or next window in window tree
+cmd - h : yabai -m window --focus west
 cmd - k : yabai -m window --focus prev
 cmd - j : yabai -m window --focus next
+cmd - l : yabai -m window --focus east
 
 # move window
 shift + cmd - h : yabai -m window --warp west
