@@ -6,8 +6,8 @@ cmd - space : yabai -m window --toggle zoom-fullscreen
 
 # focus previous or next window in window tree
 cmd - h : yabai -m window --focus west
-cmd - k : yabai -m window --focus prev
-cmd - j : yabai -m window --focus next
+cmd - k : yabai -m window --focus prev || yabai -m window --focus last
+cmd - j : yabai -m window --focus next || yabai -m window --focus first
 cmd - l : yabai -m window --focus east
 
 # move window
