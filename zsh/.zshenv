@@ -1,7 +1,7 @@
 export VISUAL=vim
 export EDITOR=vim
-export BROWSER=qutebrowser
-export TERMINAL=alacritty
+export BROWSER=/Applications/qutebrowser.app/Contents/MacOS/qutebrowser
+export TERMINAL=/Applications/Alacritty.app/Contents/MacOS/Alacritty
 
 typeset -U PATH path
 PATH="$HOME/.local/bin:$PATH"
