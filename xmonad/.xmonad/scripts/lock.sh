@@ -22,27 +22,27 @@ i3lock \
   --pass-media-keys \
   --pass-volume-keys \
   --force-clock \
-  --greetertext="Welcome back, ejiek!" \
-  --wrongtext="You have to try harder ^.~" \
-  --veriftext="Hold still, we're going to the moon and back." \
-  --noinputtext="Press backspace for 28 times in total to fight GRUB" \
+  --greeter-text="Welcome back, ejiek!" \
+  --wrong-text="You have to try harder ^.~" \
+  --verif-text="Hold still, we're going to the moon and back." \
+  --noinput-text="Press backspace for 28 times in total to fight GRUB" \
   --time-font="${LOCK_FONT}" \
   --date-font="${LOCK_FONT}" \
   --layout-font="${LOCK_FONT}" \
   --verif-font="${LOCK_FONT}" \
   --wrong-font="${LOCK_FONT}" \
   --greeter-font="${LOCK_FONT}" \
-  --timepos="80:1340" \
-  --timecolor=665c54ff \
-  --timesize=72 \
-  --datecolor=7c6f64ff \
+  --time-pos="80:1340" \
+  --time-color=665c54ff \
+  --time-size=72 \
+  --date-color=7c6f64ff \
   --time-align 1 \
   --date-align 1 \
   --bar-indicator \
   --bar-color=fbf1c700 \
-  --verifcolor=458588af \
-  --keyhlcolor=98971aaf \
-  --bshlcolor=d79921af \
-  --wrongcolor=9d0006af \
-  --bar-width=5
+  --verif-color=458588af \
+  --keyhl-color=98971aaf \
+  --bshl-color=d79921af \
+  --wrong-color=9d0006af \
+  --bar-base-width=5
 nohup picom&
