@@ -30,7 +30,7 @@ call dein#add('/Users/ejiek/.vim/bundles/repos/github.com/Shougo/dein.vim')
 
 " Add or remove your plugins here like this:
 call dein#add('gruvbox-community/gruvbox')
-call dein#add('neoclide/coc.nvim', { 'merged': 0 })
+call dein#add('neoclide/coc.nvim', { 'merged': 0, 'rev': 'release' })
 call dein#add("dhruvasagar/vim-table-mode")
 call dein#add("vim-airline/vim-airline")
 call dein#add("preservim/nerdtree")

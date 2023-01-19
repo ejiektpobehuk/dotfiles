@@ -103,14 +103,16 @@ alias -s png=sxiv
 alias -s jpg=sxiv
 
 #Arch wiki
-autoload -Uz compinit promptinit
-compinit
-promptinit
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+  autoload -Uz compinit promptinit
+  compinit
+  promptinit
+fi
 
 # Theme
 eval "$(starship init zsh)"
-
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # History search
 autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
@@ -121,7 +123,8 @@ bindkey -- "^P" up-line-or-beginning-search
 bindkey -- "^N" down-line-or-beginning-search
 
 # Autosuggestions
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # zsh-lovers
 # Fuzzy matching of completions for when you mistype them:
@@ -141,3 +144,5 @@ zstyle ':completion:*:cd:*' ignore-parents parent pwd
 source "$HOME/.config/broot/launcher/bash/br"
 
 eval "$(direnv hook zsh)"
+
+#source /Users/ejiek/.config/broot/launcher/bash/br

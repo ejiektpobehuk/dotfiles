@@ -1,7 +1,7 @@
 {
   "rust-analyzer": {
     "server": {
-      "path": "/usr/local/bin/rust-analyzer"
+      "path": "/opt/homebrew/bin/rust-analyzer"
     }
   }
 }
